@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap');
+      .label-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 16px; fill: #1e293b; }
+      .label-desc { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 12px; fill: #64748b; }
+      .screen-bg { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1; rx: 8; filter: url(#shadow); }
+      .ui-header { fill: #f1f5f9; }
+      .ui-element { fill: #e2e8f0; }
+      .ui-accent { fill: #3b82f6; }
+      .ui-alert { fill: #ef4444; }
+      .annotation { font-family: 'Inter', sans-serif; font-size: 13px; fill: #0f172a; }
+      .annotation-line { stroke: #3b82f6; stroke-width: 1.5; stroke-dasharray: 4 2; marker-end: url(#dot); }
+    </style>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6">
+      <circle cx="5" cy="5" r="5" fill="#3b82f6" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8fafc" rx="12"/>
+
+  <!-- Main Title -->
+  <text x="50" y="50" font-family="'Inter', sans-serif" font-weight="700" font-size="24" fill="#0f172a">Dashboard Evolution</text>
+  <text x="50" y="75" font-family="'Inter', sans-serif" font-size="14" fill="#64748b">Moving from raw data to actionable insights.</text>
+
+  <!-- Screen 1: The "Before" (Spreadsheet/Table) -->
+  <g transform="translate(60, 120)">
+    <rect width="300" height="200" class="screen-bg" />
+    <rect x="0" y="0" width="300" height="30" class="ui-header" rx="8" />
+    <text x="15" y="20" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">V1: Data Logger View</text>
+    
+    <!-- Table Rows -->
+    <g transform="translate(15, 45)">
+        <rect width="270" height="15" class="ui-element" y="0" opacity="0.5" />
+        <rect width="270" height="15" class="ui-element" y="20" opacity="0.3" />
+        <rect width="270" height="15" class="ui-element" y="40" opacity="0.5" />
+        <rect width="270" height="15" class="ui-element" y="60" opacity="0.3" />
+        <rect width="270" height="15" class="ui-element" y="80" opacity="0.5" />
+        <rect width="270" height="15" class="ui-element" y="100" opacity="0.3" />
+        <rect width="270" height="15" class="ui-element" y="120" opacity="0.5" />
+    </g>
+
+    <text x="150" y="185" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#ef4444" font-weight="bold">❌ Hard to spot anomalies</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 380 220 L 420 220" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arrow-lg)" />
+
+  <!-- Screen 2: The "After" (Visual Dashboard) -->
+  <g transform="translate(440, 120)">
+    <rect width="300" height="200" class="screen-bg" />
+    <rect x="0" y="0" width="300" height="30" class="ui-header" rx="8" />
+    <text x="15" y="20" font-family="'Inter', sans-serif" font-size="10" fill="#94a3b8">V2: Smart Monitor</text>
+
+    <!-- UI: Alert Banner -->
+    <rect x="15" y="40" width="270" height="25" class="ui-alert" rx="4" opacity="0.1" />
+    <rect x="15" y="40" width="4" height="25" class="ui-alert" />
+    <text x="30" y="57" font-family="'Inter', sans-serif" font-size="10" fill="#ef4444" font-weight="bold">⚠️ Moisture Alert: Sector 4</text>
+
+    <!-- UI: KPI Cards -->
+    <g transform="translate(15, 75)">
+        <rect width="130" height="50" rx="4" fill="#f8fafc" stroke="#e2e8f0" />
+        <circle cx="25" cy="25" r="10" fill="#eff6ff" />
+        <rect width="130" height="50" x="140" rx="4" fill="#f8fafc" stroke="#e2e8f0" />
+        <circle cx="165" cy="25" r="10" fill="#eff6ff" />
+        
+        <!-- Mock Numbers -->
+        <rect x="45" y="15" width="40" height="8" class="ui-element" />
+        <rect x="45" y="28" width="60" height="6" class="ui-element" opacity="0.6" />
+        
+        <rect x="185" y="15" width="40" height="8" class="ui-element" />
+        <rect x="185" y="28" width="60" height="6" class="ui-element" opacity="0.6" />
+    </g>
+
+    <!-- UI: Chart -->
+    <g transform="translate(15, 135)">
+        <rect width="270" height="50" rx="4" fill="#f8fafc" stroke="#e2e8f0" />
+        <path d="M 10 35 Q 50 10 90 25 T 170 30 T 260 15" fill="none" stroke="#3b82f6" stroke-width="2" />
+        <path d="M 10 35 Q 50 10 90 25 T 170 30 T 260 15 L 260 45 L 10 45 Z" fill="#eff6ff" opacity="0.5" />
+    </g>
+  </g>
+
+  <!-- Annotations -->
+  <g transform="translate(0, 360)">
+     <path d="M 460 380 Q 420 380 430 -220" class="annotation-line" stroke-opacity="0" /> <!-- Hidden helper -->
+     
+     <text x="60" y="20" class="label-title">Key Improvements:</text>
+     
+     <g transform="translate(60, 50)">
+        <circle cx="5" cy="-5" r="3" fill="#3b82f6" />
+        <text x="15" y="0" class="annotation">Mobile-friendly alert banner (Red Zone) prioritizes urgency.</text>
+     </g>
+     <g transform="translate(60, 80)">
+        <circle cx="5" cy="-5" r="3" fill="#3b82f6" />
+        <text x="15" y="0" class="annotation">visual trend lines replace raw values for faster scanning.</text>
+     </g>
+  </g>
+
+  <defs>
+    <marker id="arrow-lg" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,8 L12,4 z" fill="#cbd5e1" />
+    </marker>
+  </defs>
+</svg>

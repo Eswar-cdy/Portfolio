@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <filter id="arch-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+     <marker id="arrow-conn" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#94a3b8" />
+    </marker>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;family=Inter:wght@400;600&amp;display=swap');
+      .font-tech { font-family: 'Fira Code', monospace; }
+      .font-ui { font-family: 'Inter', sans-serif; }
+      .box-edge { fill: #f0fdf4; stroke: #16a34a; stroke-width: 1.5; rx: 6; filter: url(#arch-shadow); }
+      .box-cloud { fill: #eff6ff; stroke: #2563eb; stroke-width: 1.5; rx: 6; filter: url(#arch-shadow); }
+      .box-db { fill: #fefce8; stroke: #ca8a04; stroke-width: 1.5; rx: 6; filter: url(#arch-shadow); }
+      .box-client { fill: #fafafa; stroke: #525252; stroke-width: 1.5; rx: 6; filter: url(#arch-shadow); }
+      .text-label { font-size: 14px; font-weight: 600; text-anchor: middle; fill: #1e293b; }
+      .text-sub { font-size: 11px; text-anchor: middle; fill: #64748b; }
+      .conn-line { stroke: #94a3b8; stroke-width: 2; fill: none; marker-end: url(#arrow-conn); }
+      .zone-label { font-size: 12px; font-weight: 600; fill: #94a3b8; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff" />
+  
+  <!-- Zones -->
+  <rect x="20" y="40" width="220" height="340" fill="#f8fafc" rx="12" />
+  <text x="130" y="360" text-anchor="middle" class="font-ui zone-label">Edge Layer (Roof)</text>
+  
+  <rect x="260" y="40" width="280" height="340" fill="#f8fafc" rx="12" />
+  <text x="400" y="360" text-anchor="middle" class="font-ui zone-label">Cloud Infrastructure</text>
+  
+  <rect x="560" y="40" width="220" height="340" fill="#f8fafc" rx="12" />
+  <text x="670" y="360" text-anchor="middle" class="font-ui zone-label">Client Layer</text>
+
+  <!-- Component: Sensors / Edge -->
+  <g transform="translate(60, 150)">
+    <rect width="140" height="100" class="box-edge" />
+    <text x="70" y="40" class="font-tech text-label">ESP32 Node</text>
+    <text x="70" y="60" class="font-ui text-sub">DHT22 + Moisture</text>
+    <text x="70" y="75" class="font-ui text-sub" fill="#16a34a">Local Alert Logic</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M 200 200 L 290 200" class="conn-line" />
+  <text x="245" y="190" text-anchor="middle" class="font-tech" font-size="10" fill="#64748b">MQTT/Wifi</text>
+
+  <!-- Component: Ingest -->
+  <g transform="translate(290, 80)">
+    <rect width="100" height="60" class="box-cloud" />
+    <text x="50" y="35" class="font-tech text-label">FastAPI</text>
+  </g>
+
+  <!-- Component: DB -->
+  <g transform="translate(350, 200)">
+    <rect width="120" height="80" class="box-db" />
+    <path d="M100,20 l0,40" stroke="#ca8a04" stroke-width="1" stroke-dasharray="2 2" />
+    <text x="50" y="35" class="font-tech text-label">TimescaleDB</text>
+    <text x="50" y="55" class="font-ui text-sub">Time-Series Data</text>
+  </g>
+  
+  <!-- Arrow Ingest -> DB -->
+  <path d="M 340 140 L 390 200" class="conn-line" />
+
+  <!-- Component: Notification Service -->
+  <g transform="translate(290, 290)">
+    <rect width="120" height="50" class="box-cloud" style="stroke-dasharray: 4 2" />
+    <text x="60" y="30" class="font-tech text-label">Twilio API</text>
+  </g>
+  
+  <!-- Arrow DB -> Notification (Logic) -->
+   <path d="M 410 280 L 370 290" class="conn-line" />
+
+  <!-- Component: Dashboard -->
+  <g transform="translate(600, 100)">
+    <rect width="140" height="90" class="box-client" />
+    <text x="70" y="40" class="font-tech text-label">Dashboard</text>
+    <text x="70" y="60" class="font-ui text-sub">Next.js + Recharts</text>
+  </g>
+  
+  <!-- Arrow API -> Dashboard -->
+  <path d="M 390 110 L 600 145" class="conn-line" />
+
+  <!-- Component: Mobile -->
+  <g transform="translate(600, 280)">
+     <rect width="140" height="60" class="box-client" />
+    <text x="70" y="35" class="font-ui text-label">SMS Alert</text>
+  </g>
+
+   <!-- Arrow Twilio -> Mobile -->
+  <path d="M 410 315 L 600 310" class="conn-line" />
+
+</svg>

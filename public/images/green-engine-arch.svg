@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <filter id="ge-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&amp;family=Inter:wght@400;600;700&amp;display=swap');
+      .font-tech { font-family: 'Fira Code', monospace; }
+      .font-ui { font-family: 'Inter', sans-serif; }
+      .box-edge { fill: #f0fdf4; stroke: #16a34a; stroke-width: 1.5; rx: 8; filter: url(#ge-shadow); }
+      .box-cloud { fill: #eff6ff; stroke: #2563eb; stroke-width: 1.5; rx: 8; filter: url(#ge-shadow); }
+      .box-cam { fill: #fefce8; stroke: #eab308; stroke-width: 1.5; rx: 8; filter: url(#ge-shadow); }
+      .text-label { font-size: 14px; font-weight: 600; text-anchor: middle; fill: #1e293b; }
+      .text-sub { font-size: 11px; text-anchor: middle; fill: #64748b; }
+      .conn-line { stroke: #94a3b8; stroke-width: 2; fill: none; stroke-dasharray: 4 2; }
+      .conn-solid { stroke: #2563eb; stroke-width: 2; fill: none; marker-end: url(#arrow-ge); }
+    </style>
+    <marker id="arrow-ge" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2563eb" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff" />
+
+  <!-- Zones -->
+  <rect x="20" y="40" width="240" height="340" fill="#f8fafc" rx="12" />
+  <text x="140" y="370" text-anchor="middle" class="font-ui" font-weight="700" fill="#94a3b8" letter-spacing="1">GROW CHAMBER</text>
+  
+  <rect x="280" y="40" width="240" height="340" fill="#f8fafc" rx="12" />
+  <text x="400" y="370" text-anchor="middle" class="font-ui" font-weight="700" fill="#94a3b8" letter-spacing="1">PROCESSING UNIT</text>
+  
+  <rect x="540" y="40" width="240" height="340" fill="#f8fafc" rx="12" />
+  <text x="660" y="370" text-anchor="middle" class="font-ui" font-weight="700" fill="#94a3b8" letter-spacing="1">CLOUD / UI</text>
+
+  <!-- Components: Sensors -->
+  <g transform="translate(60, 80)">
+    <rect width="160" height="80" class="box-edge" />
+    <text x="80" y="35" class="font-tech text-label">DHT22 / Soil</text>
+    <text x="80" y="55" class="font-ui text-sub">Temp, Humidity, Moisture</text>
+  </g>
+
+  <!-- Components: Camera -->
+  <g transform="translate(60, 220)">
+    <rect width="160" height="80" class="box-cam" />
+    <text x="80" y="35" class="font-tech text-label">Pi Camera v2</text>
+    <text x="80" y="55" class="font-ui text-sub">Hourly HQ Capture</text>
+  </g>
+
+  <!-- Components: Pi / Edge Compute -->
+  <g transform="translate(320, 150)">
+    <rect width="160" height="100" class="box-cloud" />
+    <text x="80" y="35" class="font-tech text-label">Raspberry Pi 4</text>
+    <text x="80" y="55" class="font-ui text-sub">OpenCV Analysis</text>
+    <text x="80" y="70" class="font-ui text-sub" fill="#2563eb">Leaf Area Index</text>
+  </g>
+  
+  <!-- Connections to Pi -->
+  <path d="M 220 120 C 270 120, 270 170, 320 180" class="conn-solid" />
+  <path d="M 220 260 C 270 260, 270 210, 320 200" class="conn-solid" />
+
+  <!-- Components: Database -->
+  <g transform="translate(580, 80)">
+    <rect width="160" height="80" class="box-cloud" stroke="#ca8a04" fill="#fefce8" />
+    <text x="80" y="35" class="font-tech text-label">TimescaleDB</text>
+    <text x="80" y="55" class="font-ui text-sub">Time-Series Metrics</text>
+  </g>
+  
+  <!-- Components: Dashboard -->
+  <g transform="translate(580, 220)">
+    <rect width="160" height="80" class="box-cloud" stroke="#16a34a" fill="#f0fdf4" />
+    <text x="80" y="35" class="font-tech text-label">Streamlit</text>
+    <text x="80" y="55" class="font-ui text-sub">Yield Visualization</text>
+  </g>
+
+  <!-- Connections to Cloud -->
+  <path d="M 480 170 C 530 170, 530 120, 580 120" class="conn-solid" />
+  <path d="M 480 230 C 530 230, 530 260, 580 260" class="conn-solid" />
+  
+  <rect x="500" y="160" width="40" height="20" rx="4" fill="#ffffff" stroke="#94a3b8" />
+  <text x="520" y="174" text-anchor="middle" font-size="10" font-family="sans-serif">MQTT</text>
+
+</svg>

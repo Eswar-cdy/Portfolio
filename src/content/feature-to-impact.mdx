@@ -1,0 +1,129 @@
+---
+title: "From Feature to Impact: How I Prioritize Product Roadmaps"
+date: "2024-09-30"
+excerpt: "I killed a feature with potential 10K engagement because retention data showed a 15% drop. Here's my prioritization framework."
+tags: ["Product Management", "Prioritization", "Strategy"]
+---
+
+# From Feature to Impact
+
+The hardest part of Product Management isn't saying **yes**. It's saying **no** to good ideas.
+
+## The Feature I Killed
+
+In the Smart Roofing project, we had a "Temperature Heatmap" feature ready to ship. The design was beautiful. Stakeholders loved the demo. Beta testers called it "impressive."
+
+But the data told a different story:
+
+### The Numbers
+
+- **Feature Engagement**: 80% of users viewed the heatmap
+- **Session Duration**: +25% when viewing heatmaps
+- **Week-2 Retention**: **-15%** for users who relied on heatmaps
+- **Support Tickets**: +30% ("Why didn't the heatmap warn me about the leak?")
+
+**Root Cause**: Users confused the heatmap (a diagnostic tool) with the alert system (an action trigger).
+
+**Decision**: Killed the feature. Shipped **threshold-based leak alerts** instead.
+
+**Outcome**: Retention recovered to +20% above baseline.
+
+## The Framework: RICE + R²
+
+I use a modified version of Intercom's **RICE framework** (Reach, Impact, Confidence, Effort), but I add a critical 5th dimension:
+
+### **R² = Retention Risk**
+
+| Feature | Reach | Impact | Confidence | Effort | R² (Retention Risk) | Priority |
+|---------|-------|--------|------------|--------|---------------------|----------|
+| Temperature Heatmap | 10K | 3/5 | 80% | 2 weeks | **-15%** | ❌ Kill |
+| Leak Alert System | 10K | 5/5 | 95% | 1 week | **+20%** | ✅ Ship |
+| Historical Analytics | 2K | 2/5 | 60% | 3 weeks | Neutral | 🕐 Backlog |
+
+### The Formula
+
+```
+Priority Score = (Reach × Impact × Confidence) / Effort × (1 + R²)
+```
+
+If **R² is negative** (hurts retention), the feature gets deprioritized—even if everything else looks good.
+
+## Real-World Application: Green Engine
+
+When building Green Engine, I had 12 feature requests from farmers post-beta:
+
+1. ✅ **Automated watering schedules** (High Reach, High Impact, +15% yield data)
+2. ❌ **Detailed soil composition logs** (Low Reach, farmers said "nice to have")
+3. ✅ **Mobile push alerts** (High Impact, directly prevents crop loss)
+4. 🕐 **Integration with accounting software** (High effort, niche use case)
+5. ❌ **Weather prediction API** (Farmers already use weather apps—redundant)
+
+### The Prioritized Roadmap
+
+**Sprint 1**: Leak alert system (high impact, low effort)  
+**Sprint 2**: Automated watering (proven ROI from beta data)  
+**Sprint 3**: Mobile push notifications (user-requested, high retention signal)  
+**Backlog**: Accounting integration (wait for demand signal)  
+**Killed**: Heatmap, Weather API, Soil logs
+
+## The "Why Not Both?" Trap
+
+Stakeholders often say: "Why not just build everything?"
+
+Because:
+
+1. **Cognitive Load**: Every feature adds UI complexity. Simplicity is a feature.
+2. **Maintenance Debt**: More code = more bugs.
+3. **Opportunity Cost**: Time spent on Feature X is time *not* spent on Feature Y.
+
+In Smart Roofing, shipping the heatmap would've delayed the leak alert system by **3 weeks**. Those 3 weeks could've prevented real-world roof failures.
+
+**Product strategy is math + empathy.**
+
+## When to Ignore the Data
+
+Frameworks break down in three scenarios:
+
+### 1. **Visionary Bets**
+If Steve Jobs used RICE, the iPhone wouldn't exist. Sometimes you build for a future you can't yet measure.
+
+**My Rule**: Allow 10% of roadmap for "visionary bets" with **no data justification required**.
+
+### 2. **Technical Debt**
+Refactoring doesn't improve Reach or Impact directly, but it prevents system collapse.
+
+**My Rule**: Reserve 20% of engineering capacity for tech debt, no questions asked.
+
+### 3. **Compliance/Security**
+GDPR compliance has zero user-facing impact. You still build it.
+
+**My Rule**: Compliance is non-negotiable, happens outside the prioritization framework.
+
+## The Product Manager's Dilemma
+
+Every "no" to a feature is a "yes" to something else.
+
+When I killed the Temperature Heatmap, I said **yes** to:
+- Faster time-to-market for leak alerts
+- Reduced user confusion
+- Higher retention
+
+The stakeholders who loved the heatmap weren't happy. But the retention data didn't lie.
+
+## Lessons Learned
+
+1. **Impact ≠ Engagement**: High usage doesn't mean high value.
+2. **Retention is king**: A feature that boosts engagement but kills retention is a Trojan horse.
+3. **Say no loudly**: Explain the *why* behind deprioritization. Data helps.
+
+---
+
+**Key Takeaway**: The best product roadmaps aren't built by saying yes to everything. They're built by saying **no** to almost everything—except what truly moves the needle.
+
+**Framework Summary**:
+- Use RICE for prioritization
+- Add R² (Retention Risk) as a multiplier
+- Reserve capacity for vision, tech debt, and compliance
+- Let data override intuition
+
+Product management is the art of strategic elimination.

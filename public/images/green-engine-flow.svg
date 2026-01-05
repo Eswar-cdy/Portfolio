@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <filter id="flow-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
+      .flow-box { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2; rx: 50; filter: url(#flow-shadow); }
+      .flow-text { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; fill: #1e293b; text-anchor: middle; }
+      .flow-sub { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 11px; fill: #64748b; text-anchor: middle; }
+      .loop-arrow { fill: none; stroke: #cbd5e1; stroke-width: 3; stroke-dasharray: 8 4; marker-end: url(#arrow-flow); }
+      .highlight { stroke: #10b981; }
+    </style>
+    <marker id="arrow-flow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,12 L12,6 z" fill="#cbd5e1" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#f8fafc" rx="12"/>
+  <text x="400" y="40" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-size="18" fill="#334155">Self-Optimizing Growth Cycle</text>
+
+  <!-- Step 1: Monitor -->
+  <g transform="translate(50, 100)">
+    <rect width="140" height="100" class="flow-box" />
+    <text x="70" y="45" class="flow-text">1. MONITOR</text>
+    <text x="70" y="65" class="flow-sub">Sensors capture</text>
+    <text x="70" y="80" class="flow-sub">Environment Data</text>
+  </g>
+
+  <!-- Arrow 1-2 -->
+  <path d="M 190 150 L 240 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-flow)" />
+
+  <!-- Step 2: Analyze -->
+  <g transform="translate(240, 100)">
+    <rect width="140" height="100" class="flow-box highlight" />
+    <text x="70" y="45" class="flow-text" fill="#047857">2. ANALYZE</text>
+    <text x="70" y="65" class="flow-sub">OpenCV calculates</text>
+    <text x="70" y="80" class="flow-sub">"Green Coverage"</text>
+  </g>
+
+  <!-- Arrow 2-3 -->
+  <path d="M 380 150 L 430 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-flow)" />
+
+  <!-- Step 3: Predict -->
+  <g transform="translate(430, 100)">
+    <rect width="140" height="100" class="flow-box" />
+    <text x="70" y="45" class="flow-text">3. PREDICT</text>
+    <text x="70" y="65" class="flow-sub">Model forecasts</text>
+    <text x="70" y="80" class="flow-sub">Harvest window</text>
+  </g>
+
+  <!-- Arrow 3-4 -->
+  <path d="M 570 150 L 620 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-flow)" />
+
+  <!-- Step 4: Adjust -->
+  <g transform="translate(620, 100)">
+    <rect width="140" height="100" class="flow-box" />
+    <text x="70" y="45" class="flow-text">4. ADJUST</text>
+    <text x="70" y="65" class="flow-sub">Modify light/water</text>
+    <text x="70" y="80" class="flow-sub">cycles automatically</text>
+  </g>
+  
+  <!-- Loop Back -->
+  <path d="M 690 200 Q 690 260, 400 260 Q 120 260, 120 200" class="loop-arrow" />
+  <text x="400" y="250" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8" font-style="italic">Continuous Feedback Loop (Every 1 Hour)</text>
+
+</svg>
