@@ -1,0 +1,1017 @@
+[
+  {
+    "id": 1,
+    "name": "Broccoli",
+    "scientificName": "Brassica oleracea var. italica",
+    "family": "Brassicaceae",
+    "nutrients": {
+      "vitamin_c": 89,
+      "vitamin_k": 350,
+      "vitamin_a": 1500,
+      "folate": 90,
+      "calcium": 40,
+      "iron": 1.5,
+      "protein": 2.8,
+      "fiber": 2.6
+    },
+    "benefitScores": {
+      "antioxidant": 85,
+      "anti_inflammatory": 80,
+      "heart_health": 75,
+      "immune_support": 90,
+      "digestive_health": 65,
+      "brain_health": 70,
+      "blood_sugar": 60,
+      "bone_health": 75
+    },
+    "benefits": [
+      "Rich in sulforaphane, a potent cancer-fighting compound",
+      "Supports detoxification pathways in the body",
+      "Provides powerful antioxidant protection",
+      "Supports immune system function",
+      "Promotes heart health"
+    ],
+    "usageTips": [
+      "Add to salads for a mild, fresh flavor",
+      "Blend into smoothies for added nutrition",
+      "Use as a garnish on soups and main dishes"
+    ],
+    "educationalContent": "Broccoli microgreens contain 10-100 times more sulforaphane than mature broccoli, making them one of the most potent cancer-fighting foods available. Research from Johns Hopkins University has shown that sulforaphane can target cancer stem cells and may help prevent cancer development."
+  },
+  {
+    "id": 2,
+    "name": "Radish",
+    "scientificName": "Raphanus sativus",
+    "family": "Brassicaceae",
+    "nutrients": {
+      "vitamin_c": 80,
+      "vitamin_k": 250,
+      "vitamin_a": 700,
+      "folate": 60,
+      "calcium": 30,
+      "iron": 1.2,
+      "protein": 2.2,
+      "fiber": 1.8
+    },
+    "benefitScores": {
+      "antioxidant": 75,
+      "anti_inflammatory": 70,
+      "heart_health": 65,
+      "immune_support": 80,
+      "digestive_health": 85,
+      "brain_health": 55,
+      "blood_sugar": 60,
+      "bone_health": 60
+    },
+    "benefits": [
+      "Contains natural antibacterial properties",
+      "Supports digestive health and metabolism",
+      "Provides detoxification support",
+      "Rich in antioxidants",
+      "Supports immune function"
+    ],
+    "usageTips": [
+      "Add to sandwiches and wraps for a spicy kick",
+      "Mix into salads for texture and flavor",
+      "Use as a garnish for Asian-inspired dishes"
+    ],
+    "educationalContent": "Radish microgreens have a spicy, peppery flavor and are packed with isothiocyanates, compounds that support liver detoxification pathways. They grow quickly, often ready to harvest in just 5-7 days, making them one of the fastest-growing microgreens."
+  },
+  {
+    "id": 3,
+    "name": "Sunflower",
+    "scientificName": "Helianthus annuus",
+    "family": "Asteraceae",
+    "nutrients": {
+      "vitamin_e": 7.5,
+      "vitamin_b1": 0.7,
+      "vitamin_b6": 0.2,
+      "folate": 65,
+      "zinc": 1.5,
+      "iron": 2.3,
+      "protein": 3.5,
+      "fiber": 2.1
+    },
+    "benefitScores": {
+      "antioxidant": 80,
+      "anti_inflammatory": 65,
+      "heart_health": 85,
+      "immune_support": 70,
+      "digestive_health": 60,
+      "brain_health": 75,
+      "blood_sugar": 55,
+      "bone_health": 60
+    },
+    "benefits": [
+      "Complete protein with all essential amino acids",
+      "Supports heart health with healthy fats",
+      "Provides energy and stamina",
+      "Rich in antioxidants",
+      "Supports brain health"
+    ],
+    "usageTips": [
+      "Add to salads for nutty flavor and crunch",
+      "Use in sandwiches and wraps",
+      "Blend into dips and spreads"
+    ],
+    "educationalContent": "Sunflower microgreens are one of the most nutritionally complete microgreens, offering a complete protein profile with all essential amino acids. They're also exceptionally high in zinc and vitamin E, making them excellent for immune support and skin health."
+  },
+  {
+    "id": 4,
+    "name": "Pea Shoots",
+    "scientificName": "Pisum sativum",
+    "family": "Fabaceae",
+    "flavor": "Sweet, mild",
+    "nutrients": {
+      "vitamin_a": 300,
+      "vitamin_c": 60,
+      "vitamin_e": 0,
+      "vitamin_k": 200,
+      "folate": 80,
+      "calcium": 35,
+      "iron": 2.8,
+      "potassium": 240,
+      "magnesium": 33,
+      "zinc": 0.8,
+      "fiber": 2.5,
+      "protein": 4.2
+    },
+    "benefitScores": {
+      "antioxidant": 65,
+      "heart_health": 70,
+      "immune_support": 60,
+      "digestive_health": 55,
+      "energy_boost": 85,
+      "brain_health": 50,
+      "blood_sugar": 45,
+      "bone_health": 55,
+      "anti_inflammatory": 60
+    },
+    "benefits": ["muscle_building", "iron_boost", "protein_source"],
+    "growingInfo": {
+      "difficulty": "easy",
+      "days_to_harvest": 10,
+      "yield": "high"
+    },
+    "cost_level": "medium",
+    "availability": "high",
+    "recommendedFor": ["vegans", "athletes", "protein-seekers"],
+    "usage": ["salads", "wraps", "stir-fry", "garnish"]
+  },
+  {
+    "id": 5,
+    "name": "Kale",
+    "scientificName": "Brassica oleracea",
+    "family": "Brassicaceae",
+    "nutrients": {
+        "calcium": 150,
+        "iron": 1.7,
+        "vitamin_k": 500,
+        "vitamin_a": 1000,
+        "vitamin_c": 120,
+        "protein": 2.9,
+        "fiber": 2.0
+    },
+    "benefitScores": {
+        "antioxidant": 80,
+        "heart_health": 70,
+        "immune_support": 75,
+        "digestive_health": 65,
+        "energy_boost": 70,
+        "brain_health": 75,
+        "blood_sugar": 50,
+        "bone_health": 95,
+        "anti_inflammatory": 70
+    },
+    "benefits": ["bone_health", "iron", "calcium_boost"],
+    "target": "vegans, women"
+  },
+  {
+    "id": 6,
+    "name": "Arugula",
+    "scientificName": "Eruca sativa",
+    "family": "Brassicaceae",
+    "flavor": "Peppery, bold",
+    "nutrients": {
+        "vitamin_k": 250,
+        "calcium": 160,
+        "nitrates": "high",
+        "vitamin_c": 15,
+        "folate": 97,
+        "protein": 2.6,
+        "fiber": 1.6
+    },
+    "benefitScores": {
+        "antioxidant": 75,
+        "heart_health": 95,
+        "immune_support": 65,
+        "digestive_health": 60,
+        "energy_boost": 80,
+        "brain_health": 70,
+        "blood_sugar": 55,
+        "bone_health": 80,
+        "anti_inflammatory": 70
+    },
+    "benefits": ["heart_health", "blood_pressure", "athletic_performance"]
+  },
+  {
+    "id": 7,
+    "name": "Amaranth",
+    "scientificName": "Amaranthus",
+    "family": "Amaranthaceae",
+    "color": "red/pink (visual appeal)",
+    "nutrients": {
+        "protein": 4.5,
+        "lysine": "complete",
+        "iron": 2.9,
+        "calcium": 159,
+        "magnesium": 248,
+        "vitamin_c": 43,
+        "fiber": 2.1
+    },
+    "benefitScores": {
+        "antioxidant": 70,
+        "heart_health": 65,
+        "immune_support": 60,
+        "digestive_health": 55,
+        "energy_boost": 90,
+        "brain_health": 65,
+        "blood_sugar": 50,
+        "bone_health": 60,
+        "anti_inflammatory": 65
+    },
+    "benefits": ["protein", "muscle", "vegan_nutrition"]
+  },
+  {
+    "id": 8,
+    "name": "Red Cabbage",
+    "scientificName": "Brassica oleracea var. capitata f. rubra",
+    "family": "Brassicaceae",
+    "color": "purple (visual appeal)",
+    "nutrients": {
+        "vitamin_c": 95,
+        "vitamin_k": 400,
+        "anthocyanins": "high",
+        "vitamin_a": 1100,
+        "fiber": 2.5,
+        "protein": 1.4
+    },
+    "benefitScores": {
+        "antioxidant": 95,
+        "heart_health": 75,
+        "immune_support": 85,
+        "digestive_health": 60,
+        "energy_boost": 45,
+        "brain_health": 70,
+        "blood_sugar": 55,
+        "bone_health": 60,
+        "anti_inflammatory": 85
+    },
+    "benefits": ["anti_inflammatory", "immune", "antioxidant"]
+  },
+  {
+    "id": 9,
+    "name": "Fenugreek",
+    "scientificName": "Trigonella foenum-graecum",
+    "family": "Fabaceae",
+    "target": "diabetics, nursing_mothers, athletes",
+    "nutrients": {
+        "iron": 3.3,
+        "protein": 4.0,
+        "fiber": 3.2,
+        "magnesium": 191,
+        "vitamin_b6": 0.6
+    },
+    "benefitScores": {
+        "antioxidant": 60,
+        "heart_health": 65,
+        "immune_support": 55,
+        "digestive_health": 70,
+        "energy_boost": 75,
+        "brain_health": 50,
+        "blood_sugar": 90,
+        "bone_health": 60,
+        "anti_inflammatory": 65
+    },
+    "benefits": ["blood_sugar", "lactation", "testosterone"]
+  },
+  {
+    "id": 10,
+    "name": "Wheatgrass",
+    "scientificName": "Triticum aestivum",
+    "family": "Poaceae",
+    "usage": "juice, smoothies",
+    "flavor": "grassy, strong",
+    "nutrients": {
+        "chlorophyll": "high",
+        "vitamin_e": 8,
+        "iron": 2.5,
+        "vitamin_a": 1000,
+        "vitamin_c": 12,
+        "protein": 2.0
+    },
+    "benefitScores": {
+        "antioxidant": 90,
+        "heart_health": 60,
+        "immune_support": 75,
+        "digestive_health": 80,
+        "energy_boost": 85,
+        "brain_health": 55,
+        "blood_sugar": 50,
+        "bone_health": 40,
+        "anti_inflammatory": 70
+    },
+    "benefits": ["detox", "alkalizing", "energy"]
+  },
+  {
+    "id": 11,
+    "name": "Cilantro",
+    "scientificName": "Coriandrum sativum",
+    "family": "Apiaceae",
+    "flavor": "distinctive (polarizing)",
+    "nutrients": {
+        "vitamin_k": 310,
+        "detox_compounds": "high",
+        "vitamin_a": 6748,
+        "vitamin_c": 27,
+        "iron": 1.8
+    },
+    "benefitScores": {
+        "antioxidant": 75,
+        "heart_health": 55,
+        "immune_support": 60,
+        "digestive_health": 95,
+        "energy_boost": 40,
+        "brain_health": 70,
+        "blood_sugar": 60,
+        "bone_health": 50,
+        "anti_inflammatory": 65
+    },
+    "benefits": ["heavy_metal_detox", "digestive"]
+  },
+  {
+    "id": 12,
+    "name": "Red Mustard",
+    "scientificName": "Brassica juncea",
+    "family": "Brassicaceae",
+    "flavor": "Spicy, peppery",
+    "nutrients": {
+      "vitamin_a": 2100,
+      "vitamin_c": 70,
+      "vitamin_e": 2.5,
+      "vitamin_k": 280,
+      "folate": 85,
+      "calcium": 58,
+      "iron": 1.6,
+      "potassium": 354,
+      "magnesium": 32,
+      "zinc": 0.4,
+      "fiber": 2.0,
+      "protein": 2.7
+    },
+    "benefitScores": {
+      "antioxidant": 82,
+      "anti_inflammatory": 78,
+      "heart_health": 70,
+      "immune_support": 85,
+      "digestive_health": 75,
+      "energy_boost": 60,
+      "brain_health": 65,
+      "blood_sugar": 55,
+      "bone_health": 72
+    },
+    "benefits": [
+      "High in glucosinolates for cancer prevention",
+      "Supports liver detoxification",
+      "Boosts immune system function",
+      "Provides strong antioxidant protection"
+    ],
+    "usageTips": [
+      "Add to Asian stir-fries for authentic flavor",
+      "Mix into salads for a spicy kick",
+      "Use as a garnish for sushi and noodle dishes"
+    ],
+    "educationalContent": "Red Mustard microgreens contain high levels of glucosinolates and isothiocyanates, compounds known for their cancer-fighting properties. The vibrant red-purple color indicates high anthocyanin content."
+  },
+  {
+    "id": 13,
+    "name": "Buckwheat",
+    "scientificName": "Fagopyrum esculentum",
+    "family": "Polygonaceae",
+    "flavor": "Mild, slightly sour",
+    "nutrients": {
+      "vitamin_a": 150,
+      "vitamin_c": 26,
+      "vitamin_e": 0.8,
+      "vitamin_k": 180,
+      "folate": 54,
+      "calcium": 18,
+      "iron": 2.2,
+      "potassium": 460,
+      "magnesium": 51,
+      "zinc": 0.7,
+      "fiber": 1.7,
+      "protein": 3.8
+    },
+    "benefitScores": {
+      "antioxidant": 88,
+      "anti_inflammatory": 82,
+      "heart_health": 90,
+      "immune_support": 65,
+      "digestive_health": 68,
+      "energy_boost": 75,
+      "brain_health": 70,
+      "blood_sugar": 85,
+      "bone_health": 58
+    },
+    "benefits": [
+      "Contains rutin for cardiovascular health",
+      "Complete protein source with all essential amino acids",
+      "Helps regulate blood sugar levels",
+      "Supports vascular health and circulation"
+    ],
+    "usageTips": [
+      "Perfect for green smoothies",
+      "Add to wraps and sandwiches",
+      "Mix into grain bowls for extra nutrition"
+    ],
+    "educationalContent": "Buckwheat microgreens are exceptionally high in rutin, a flavonoid that strengthens blood vessels and may help lower blood pressure. Despite the name, buckwheat is gluten-free and not related to wheat."
+  },
+  {
+    "id": 14,
+    "name": "Beet",
+    "scientificName": "Beta vulgaris",
+    "family": "Amaranthaceae",
+    "flavor": "Sweet, earthy",
+    "color": "Deep red/purple stems",
+    "nutrients": {
+      "vitamin_a": 1200,
+      "vitamin_c": 30,
+      "vitamin_e": 1.5,
+      "vitamin_k": 400,
+      "folate": 109,
+      "calcium": 16,
+      "iron": 3.4,
+      "potassium": 325,
+      "magnesium": 70,
+      "zinc": 0.4,
+      "fiber": 2.8,
+      "protein": 2.2
+    },
+    "benefitScores": {
+      "antioxidant": 92,
+      "anti_inflammatory": 75,
+      "heart_health": 88,
+      "immune_support": 70,
+      "digestive_health": 72,
+      "energy_boost": 85,
+      "brain_health": 80,
+      "blood_sugar": 65,
+      "bone_health": 65
+    },
+    "benefits": [
+      "Rich in betalains for liver detoxification",
+      "Supports healthy blood flow and oxygenation",
+      "High in natural nitrates for athletic performance",
+      "Promotes cognitive function and brain health"
+    ],
+    "usageTips": [
+      "Add to salads for vibrant color and earthy flavor",
+      "Juice with other greens for a nutrient boost",
+      "Use as an elegant garnish for fine dining"
+    ],
+    "educationalContent": "Beet microgreens contain betalains, unique phytonutrients with powerful antioxidant and anti-inflammatory properties. The high iron content makes them excellent for supporting healthy blood and energy levels."
+  },
+  {
+    "id": 15,
+    "name": "Basil",
+    "scientificName": "Ocimum basilicum",
+    "family": "Lamiaceae",
+    "flavor": "Sweet, aromatic",
+    "nutrients": {
+      "vitamin_a": 5275,
+      "vitamin_c": 18,
+      "vitamin_e": 0.8,
+      "vitamin_k": 415,
+      "folate": 68,
+      "calcium": 177,
+      "iron": 3.2,
+      "potassium": 295,
+      "magnesium": 64,
+      "zinc": 0.8,
+      "fiber": 1.6,
+      "protein": 3.2
+    },
+    "benefitScores": {
+      "antioxidant": 90,
+      "anti_inflammatory": 88,
+      "heart_health": 72,
+      "immune_support": 80,
+      "digestive_health": 78,
+      "energy_boost": 55,
+      "brain_health": 75,
+      "blood_sugar": 68,
+      "bone_health": 78
+    },
+    "benefits": [
+      "Contains essential oils with antibacterial properties",
+      "Supports stress reduction and mental clarity",
+      "Rich in antioxidants for cellular protection",
+      "Promotes digestive health and reduces inflammation"
+    ],
+    "usageTips": [
+      "Perfect for Italian dishes and caprese salads",
+      "Add to pesto for intense basil flavor",
+      "Use as a garnish for pasta and pizza"
+    ],
+    "educationalContent": "Basil microgreens contain concentrated amounts of eugenol, linalool, and other essential oils that provide powerful anti-inflammatory and antimicrobial benefits. The vitamin K content supports bone health and proper blood clotting."
+  },
+  {
+    "id": 16,
+    "name": "Swiss Chard",
+    "scientificName": "Beta vulgaris subsp. cicla",
+    "family": "Amaranthaceae",
+    "flavor": "Mild, slightly salty",
+    "color": "Rainbow stems (red, yellow, orange)",
+    "nutrients": {
+      "vitamin_a": 6116,
+      "vitamin_c": 30,
+      "vitamin_e": 1.9,
+      "vitamin_k": 830,
+      "folate": 14,
+      "calcium": 51,
+      "iron": 1.8,
+      "potassium": 379,
+      "magnesium": 81,
+      "zinc": 0.4,
+      "fiber": 1.6,
+      "protein": 1.8
+    },
+    "benefitScores": {
+      "antioxidant": 85,
+      "anti_inflammatory": 80,
+      "heart_health": 78,
+      "immune_support": 82,
+      "digestive_health": 65,
+      "energy_boost": 68,
+      "brain_health": 72,
+      "blood_sugar": 75,
+      "bone_health": 88
+    },
+    "benefits": [
+      "Exceptional vitamin K content for bone health",
+      "Supports blood sugar regulation",
+      "High in magnesium for muscle and nerve function",
+      "Beautiful rainbow colors add visual appeal"
+    ],
+    "usageTips": [
+      "Add to salads for mild flavor and stunning color",
+      "Mix into smoothie bowls as a decorative topping",
+      "Use in wraps and sandwiches"
+    ],
+    "educationalContent": "Swiss Chard microgreens are among the highest in vitamin K, providing over 800% of the daily value per serving. The vibrant colored stems contain different betalain pigments with unique health benefits."
+  },
+  {
+    "id": 17,
+    "name": "Lettuce",
+    "scientificName": "Lactuca sativa",
+    "family": "Asteraceae",
+    "flavor": "Mild, slightly sweet",
+    "nutrients": {
+      "vitamin_a": 3700,
+      "vitamin_c": 18,
+      "vitamin_e": 0.2,
+      "vitamin_k": 174,
+      "folate": 38,
+      "calcium": 36,
+      "iron": 0.9,
+      "potassium": 238,
+      "magnesium": 13,
+      "zinc": 0.2,
+      "fiber": 1.3,
+      "protein": 1.4
+    },
+    "benefitScores": {
+      "antioxidant": 65,
+      "anti_inflammatory": 58,
+      "heart_health": 55,
+      "immune_support": 62,
+      "digestive_health": 60,
+      "energy_boost": 45,
+      "brain_health": 52,
+      "blood_sugar": 48,
+      "bone_health": 65
+    },
+    "benefits": [
+      "Gentle on the digestive system",
+      "Hydrating with high water content",
+      "Mild flavor perfect for beginners",
+      "Good source of vitamin A for eye health"
+    ],
+    "usageTips": [
+      "Ideal base for salads",
+      "Add to smoothies without strong flavor",
+      "Perfect for children and picky eaters"
+    ],
+    "educationalContent": "Lettuce microgreens are one of the mildest varieties, making them perfect for introducing microgreens to beginners. They contain lactucin, a compound that may have mild sedative and pain-relieving properties."
+  },
+  {
+    "id": 18,
+    "name": "Parsley",
+    "scientificName": "Petroselinum crispum",
+    "family": "Apiaceae",
+    "flavor": "Fresh, herbal",
+    "nutrients": {
+      "vitamin_a": 8424,
+      "vitamin_c": 133,
+      "vitamin_e": 0.8,
+      "vitamin_k": 1640,
+      "folate": 152,
+      "calcium": 138,
+      "iron": 6.2,
+      "potassium": 554,
+      "magnesium": 50,
+      "zinc": 1.1,
+      "fiber": 3.3,
+      "protein": 3.0
+    },
+    "benefitScores": {
+      "antioxidant": 88,
+      "anti_inflammatory": 82,
+      "heart_health": 75,
+      "immune_support": 90,
+      "digestive_health": 80,
+      "energy_boost": 78,
+      "brain_health": 70,
+      "blood_sugar": 62,
+      "bone_health": 95
+    },
+    "benefits": [
+      "Exceptionally high in vitamin K for bone health",
+      "Supports kidney function and urinary health",
+      "Natural breath freshener with chlorophyll",
+      "Rich in iron for energy and vitality"
+    ],
+    "usageTips": [
+      "Add to Mediterranean dishes for authentic flavor",
+      "Mix into tabbouleh salads",
+      "Use as a fresh garnish for soups and stews"
+    ],
+    "educationalContent": "Parsley microgreens contain one of the highest vitamin K concentrations of any food, with over 1600% of the daily value. They're also rich in myristicin and apigenin, compounds that support detoxification and have anti-cancer properties."
+  },
+  {
+    "id": 19,
+    "name": "Cress",
+    "scientificName": "Lepidium sativum",
+    "family": "Brassicaceae",
+    "flavor": "Peppery, tangy",
+    "nutrients": {
+      "vitamin_a": 9300,
+      "vitamin_c": 69,
+      "vitamin_e": 0.7,
+      "vitamin_k": 542,
+      "folate": 80,
+      "calcium": 81,
+      "iron": 1.3,
+      "potassium": 606,
+      "magnesium": 38,
+      "zinc": 0.2,
+      "fiber": 1.1,
+      "protein": 2.6
+    },
+    "benefitScores": {
+      "antioxidant": 80,
+      "anti_inflammatory": 75,
+      "heart_health": 72,
+      "immune_support": 88,
+      "digestive_health": 70,
+      "energy_boost": 65,
+      "brain_health": 68,
+      "blood_sugar": 58,
+      "bone_health": 85
+    },
+    "benefits": [
+      "High in vitamin C for immune support",
+      "Contains benzyl isothiocyanate with anti-cancer properties",
+      "Supports respiratory health",
+      "Fast-growing and easy to cultivate"
+    ],
+    "usageTips": [
+      "Classic for egg salad sandwiches",
+      "Add to cream cheese on bagels",
+      "Use as a peppery garnish for soups"
+    ],
+    "educationalContent": "Cress microgreens have been cultivated for centuries and were favored by ancient Romans for their health benefits. They grow incredibly fast (5-7 days) and pack a peppery punch similar to watercress."
+  },
+  {
+    "id": 20,
+    "name": "Flax",
+    "scientificName": "Linum usitatissimum",
+    "family": "Linaceae",
+    "flavor": "Mild, slightly nutty",
+    "nutrients": {
+      "vitamin_a": 200,
+      "vitamin_c": 12,
+      "vitamin_e": 5.5,
+      "vitamin_k": 85,
+      "folate": 45,
+      "calcium": 26,
+      "iron": 1.5,
+      "potassium": 140,
+      "magnesium": 98,
+      "zinc": 0.9,
+      "fiber": 4.5,
+      "protein": 3.2,
+      "omega_3": 2400
+    },
+    "benefitScores": {
+      "antioxidant": 78,
+      "anti_inflammatory": 90,
+      "heart_health": 95,
+      "immune_support": 68,
+      "digestive_health": 88,
+      "energy_boost": 65,
+      "brain_health": 90,
+      "blood_sugar": 75,
+      "bone_health": 60
+    },
+    "benefits": [
+      "Exceptionally high in omega-3 fatty acids",
+      "Rich in lignans for hormonal balance",
+      "Supports heart and brain health",
+      "High fiber content aids digestion"
+    ],
+    "usageTips": [
+      "Add to smoothies for omega-3 boost",
+      "Mix into yogurt or oatmeal",
+      "Use as a topping for avocado toast"
+    ],
+    "educationalContent": "Flax microgreens are one of the richest plant sources of omega-3 fatty acids (alpha-linolenic acid). They also contain high levels of lignans, phytoestrogens that may help balance hormones and protect against certain cancers."
+  },
+  {
+    "id": 21,
+    "name": "Chia",
+    "scientificName": "Salvia hispanica",
+    "family": "Lamiaceae",
+    "flavor": "Mild, neutral",
+    "nutrients": {
+      "vitamin_a": 54,
+      "vitamin_c": 1.6,
+      "vitamin_e": 0.5,
+      "vitamin_k": 30,
+      "folate": 49,
+      "calcium": 631,
+      "iron": 7.7,
+      "potassium": 407,
+      "magnesium": 335,
+      "zinc": 4.6,
+      "fiber": 34.4,
+      "protein": 16.5,
+      "omega_3": 17800
+    },
+    "benefitScores": {
+      "antioxidant": 85,
+      "anti_inflammatory": 88,
+      "heart_health": 92,
+      "immune_support": 75,
+      "digestive_health": 95,
+      "energy_boost": 82,
+      "brain_health": 88,
+      "blood_sugar": 80,
+      "bone_health": 90
+    },
+    "benefits": [
+      "Highest plant-based source of omega-3 fatty acids",
+      "Exceptional fiber content for digestive health",
+      "Complete protein with all essential amino acids",
+      "Rich in calcium for bone health"
+    ],
+    "usageTips": [
+      "Add to smoothies and protein shakes",
+      "Mix into energy bars and baked goods",
+      "Sprinkle on salads for extra nutrition"
+    ],
+    "educationalContent": "Chia microgreens contain even more nutrients than chia seeds, with concentrated levels of omega-3 fatty acids, fiber, and complete protein. Ancient Aztec warriors used chia for sustained energy during long battles."
+  },
+  {
+    "id": 22,
+    "name": "Celery",
+    "scientificName": "Apium graveolens",
+    "family": "Apiaceae",
+    "flavor": "Strong celery taste",
+    "nutrients": {
+      "vitamin_a": 450,
+      "vitamin_c": 3.1,
+      "vitamin_e": 0.3,
+      "vitamin_k": 29,
+      "folate": 36,
+      "calcium": 40,
+      "iron": 0.2,
+      "potassium": 260,
+      "magnesium": 11,
+      "zinc": 0.1,
+      "fiber": 1.6,
+      "protein": 0.7
+    },
+    "benefitScores": {
+      "antioxidant": 70,
+      "anti_inflammatory": 82,
+      "heart_health": 85,
+      "immune_support": 58,
+      "digestive_health": 75,
+      "energy_boost": 50,
+      "brain_health": 65,
+      "blood_sugar": 70,
+      "bone_health": 48
+    },
+    "benefits": [
+      "Contains luteolin with anti-inflammatory properties",
+      "Supports healthy blood pressure levels",
+      "May help reduce joint inflammation",
+      "Low calorie with high flavor intensity"
+    ],
+    "usageTips": [
+      "Add to Bloody Marys and savory cocktails",
+      "Mix into vegetable juices",
+      "Use as a garnish for soups and stews"
+    ],
+    "educationalContent": "Celery microgreens contain phthalides, compounds that may help relax blood vessel walls and lower blood pressure. They deliver intense celery flavor in a small package, making them economical for culinary use."
+  },
+  {
+    "id": 23,
+    "name": "Dill",
+    "scientificName": "Anethum graveolens",
+    "family": "Apiaceae",
+    "flavor": "Aromatic, anise-like",
+    "nutrients": {
+      "vitamin_a": 771,
+      "vitamin_c": 85,
+      "vitamin_e": 1.8,
+      "vitamin_k": 50,
+      "folate": 150,
+      "calcium": 208,
+      "iron": 6.6,
+      "potassium": 738,
+      "magnesium": 55,
+      "zinc": 0.9,
+      "fiber": 2.1,
+      "protein": 3.5
+    },
+    "benefitScores": {
+      "antioxidant": 78,
+      "anti_inflammatory": 75,
+      "heart_health": 68,
+      "immune_support": 72,
+      "digestive_health": 90,
+      "energy_boost": 62,
+      "brain_health": 60,
+      "blood_sugar": 58,
+      "bone_health": 75
+    },
+    "benefits": [
+      "Supports digestive health and reduces gas",
+      "Contains monoterpenes with anti-cancer properties",
+      "May help calm upset stomachs",
+      "Rich in calcium and iron"
+    ],
+    "usageTips": [
+      "Perfect for Scandinavian and Eastern European dishes",
+      "Add to fish and seafood preparations",
+      "Mix into yogurt-based sauces and dips"
+    ],
+    "educationalContent": "Dill microgreens have been used medicinally for thousands of years to treat digestive complaints. They contain carvone and limonene, essential oils that support digestion and may have antimicrobial properties."
+  },
+  {
+    "id": 24,
+    "name": "Fennel",
+    "scientificName": "Foeniculum vulgare",
+    "family": "Apiaceae",
+    "flavor": "Licorice, sweet",
+    "nutrients": {
+      "vitamin_a": 135,
+      "vitamin_c": 12,
+      "vitamin_e": 0.6,
+      "vitamin_k": 63,
+      "folate": 27,
+      "calcium": 49,
+      "iron": 0.7,
+      "potassium": 414,
+      "magnesium": 17,
+      "zinc": 0.2,
+      "fiber": 3.1,
+      "protein": 1.2
+    },
+    "benefitScores": {
+      "antioxidant": 75,
+      "anti_inflammatory": 80,
+      "heart_health": 70,
+      "immune_support": 65,
+      "digestive_health": 92,
+      "energy_boost": 55,
+      "brain_health": 62,
+      "blood_sugar": 60,
+      "bone_health": 58
+    },
+    "benefits": [
+      "Excellent for digestive health and bloating",
+      "Contains anethole with anti-inflammatory properties",
+      "Supports respiratory health",
+      "May help reduce menstrual discomfort"
+    ],
+    "usageTips": [
+      "Add to Mediterranean salads",
+      "Use in seafood dishes and fish preparations",
+      "Mix into coleslaw for unique flavor"
+    ],
+    "educationalContent": "Fennel microgreens contain anethole, the compound responsible for their distinctive licorice flavor. This essential oil has been shown to reduce inflammation and may help protect against cancer development."
+  },
+  {
+    "id": 25,
+    "name": "Mizuna",
+    "scientificName": "Brassica rapa var. nipposinica",
+    "family": "Brassicaceae",
+    "flavor": "Mild mustard, slightly peppery",
+    "nutrients": {
+      "vitamin_a": 2800,
+      "vitamin_c": 65,
+      "vitamin_e": 2.0,
+      "vitamin_k": 270,
+      "folate": 92,
+      "calcium": 105,
+      "iron": 1.9,
+      "potassium": 420,
+      "magnesium": 42,
+      "zinc": 0.5,
+      "fiber": 2.2,
+      "protein": 2.9
+    },
+    "benefitScores": {
+      "antioxidant": 80,
+      "anti_inflammatory": 76,
+      "heart_health": 73,
+      "immune_support": 82,
+      "digestive_health": 72,
+      "energy_boost": 68,
+      "brain_health": 70,
+      "blood_sugar": 60,
+      "bone_health": 78
+    },
+    "benefits": [
+      "Traditional Japanese green with health benefits",
+      "Contains glucosinolates for detoxification",
+      "Supports immune system function",
+      "Milder than other mustard greens"
+    ],
+    "usageTips": [
+      "Perfect for Asian stir-fries and noodle dishes",
+      "Add to miso soup as a finishing touch",
+      "Use in sushi rolls and Japanese salads"
+    ],
+    "educationalContent": "Mizuna microgreens are a staple in Japanese cuisine and are prized for their delicate, feathery leaves. They contain similar cancer-fighting compounds as other brassicas but with a much milder, more approachable flavor."
+  },
+  {
+    "id": 26,
+    "name": "Nasturtium",
+    "scientificName": "Tropaeolum majus",
+    "family": "Tropaeolaceae",
+    "flavor": "Peppery, floral",
+    "color": "Edible flowers included",
+    "nutrients": {
+      "vitamin_a": 3500,
+      "vitamin_c": 130,
+      "vitamin_e": 1.2,
+      "vitamin_k": 85,
+      "folate": 42,
+      "calcium": 93,
+      "iron": 1.3,
+      "potassium": 564,
+      "magnesium": 33,
+      "zinc": 0.3,
+      "fiber": 1.5,
+      "protein": 2.6
+    },
+    "benefitScores": {
+      "antioxidant": 88,
+      "anti_inflammatory": 83,
+      "heart_health": 75,
+      "immune_support": 92,
+      "digestive_health": 70,
+      "energy_boost": 60,
+      "brain_health": 68,
+      "blood_sugar": 55,
+      "bone_health": 65
+    },
+    "benefits": [
+      "Natural antibiotic properties from benzyl isothiocyanate",
+      "Exceptionally high in vitamin C for immune support",
+      "Edible flowers add beauty and nutrition",
+      "Supports respiratory health"
+    ],
+    "usageTips": [
+      "Use flowers and leaves as elegant garnishes",
+      "Add to salads for peppery flavor and visual appeal",
+      "Perfect for high-end plating and fine dining"
+    ],
+    "educationalContent": "Nasturtium microgreens (including the edible flowers) have been used medicinally for centuries as a natural antibiotic. They contain tropaeolin, a powerful antimicrobial compound effective against various bacteria and fungi."
+  }
+]

@@ -9,15 +9,22 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fontsource/outfit": "^5.2.8",
+    "@fontsource/plus-jakarta-sans": "^5.2.8",
+    "@google/generative-ai": "^0.24.1",
+    "@tabler/icons-react": "^3.36.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.25",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.556.0",
+    "newsapi": "^2.4.1",
     "next": "16.0.7",
     "next-mdx-remote": "^5.0.0",
+    "octokit": "^5.0.5",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "recharts": "^3.5.1",
+    "rss-parser": "^3.13.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
@@ -28,6 +35,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

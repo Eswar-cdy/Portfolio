@@ -1,0 +1,17 @@
+---
+title: "Scaling Systems: When Database Queries Become Bottlenecks"
+date: "2026-01-07"
+description: "A deep dive into optimizing SQL queries for high-throughput applications."
+tags: ["System Design", "SQL", "Optimization"]
+category: "Engineering"
+---
+
+Startups often prioritize speed over scale, which is correct—until it isn't.
+
+## The N+1 Problem
+One of the most common issues I see in early-stage products is the N+1 query problem. When fetching a list of items and then interacting with a related table for *each* item, you explode your database load.
+
+### Solution
+*   **Eager Loading**: Fetch all related data in one go.
+*   **Caching**: Redis is your friend.
+*   **Read Replicas**: Distribute the load for analytics dashboards.

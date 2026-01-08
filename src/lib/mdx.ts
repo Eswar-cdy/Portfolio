@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const contentDirectory = path.join(process.cwd(), 'src/content');
+const contentDirectory = path.join(process.cwd(), 'src/content/blog');
 
 export type Post = {
     slug: string;
@@ -36,7 +36,8 @@ export function getPostBySlug(slug: string): Post | null {
         meta: {
             title: data.title,
             date: data.date,
-            excerpt: data.excerpt,
+            excerpt: data.excerpt || data.description,
+            category: data.category || 'General',
             tags: data.tags,
             ...data,
         },

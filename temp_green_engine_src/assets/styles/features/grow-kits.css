@@ -1,0 +1,493 @@
+/* Grow Kits Page Styles */
+
+.growkits-page {
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.growkits-header {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.growkits-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.growkits-header p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* Pricing Cards Grid */
+.pricing-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(5, 150, 105, 0.15);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #f59e0b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  z-index: 10;
+}
+
+.pricing-image-placeholder {
+  background-color: #e5e7eb;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-slot {
+  text-align: center;
+  padding: 20px;
+}
+
+.image-alt-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.pricing-content {
+  padding: 2rem;
+}
+
+.pricing-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-tagline {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-price-section {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-original-price {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.pricing-current-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #059669;
+}
+
+.pricing-contact {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.pricing-features,
+.pricing-specs {
+  margin-bottom: 1.5rem;
+}
+
+.features-heading,
+.specs-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.features-list,
+.specs-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li,
+.specs-list li {
+  padding: 0.5rem 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.features-list li {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.pricing-cta-button {
+  width: 100%;
+  background-color: #059669;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-cta-button:hover {
+  background-color: #047857;
+  transform: translateY(-2px);
+}
+
+/* Trust Badges */
+.trust-badges {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.trust-badges-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #059669;
+  font-weight: 600;
+}
+
+.trust-badge-icon {
+  font-size: 2rem;
+}
+
+/* Comparison Table */
+.comparison-table-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.comparison-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.comparison-table-desktop {
+  display: block;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-table th {
+  background-color: #059669;
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.comparison-table .popular-column {
+  background-color: #d1fae5;
+}
+
+.comparison-table .feature-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.comparison-table-mobile {
+  display: none;
+}
+
+/* Contact Form */
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.contact-form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-form-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-header p {
+  color: #6b7280;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #059669;
+}
+
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.submit-button {
+  flex: 1;
+  background-color: #059669;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #047857;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #d1d5db;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .growkits-header h1 {
+    font-size: 2rem;
+  }
+
+  .growkits-header p {
+    font-size: 1rem;
+  }
+
+  .pricing-grid {
+    padding: 40px 20px;
+  }
+
+  .pricing-name {
+    font-size: 1.5rem;
+  }
+
+  .pricing-current-price {
+    font-size: 2rem;
+  }
+
+  .comparison-table-desktop {
+    display: none;
+  }
+
+  .comparison-table-mobile {
+    display: block;
+  }
+
+  .comparison-row-mobile {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .feature-name-mobile {
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .feature-values-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .value-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .value-item.popular {
+    background-color: #d1fae5;
+    font-weight: 600;
+  }
+
+  .system-label {
+    color: #6b7280;
+    font-weight: 600;
+  }
+
+  .trust-badges-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+

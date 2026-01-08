@@ -1,0 +1,107 @@
+.microgreen-benefits-chart {
+  margin: 2rem 0;
+}
+
+.benefits-summary {
+  background-color: #f0f7f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.benefits-summary h3 {
+  color: #2c7744;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.addressed-goals {
+  margin-top: 1.5rem;
+}
+
+.goal-item {
+  margin-bottom: 1rem;
+}
+
+.goal-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.goal-bar-container {
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.goal-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease-out;
+}
+
+.goal-score {
+  position: absolute;
+  right: 10px;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.benefits-radar-chart {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.benefits-radar-chart h3 {
+  color: #2c7744;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.chart-container {
+  height: 400px;
+  position: relative;
+}
+
+.benefits-legend {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.benefits-legend h4 {
+  color: #2c7744;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.benefits-legend ul {
+  columns: 2;
+  padding-left: 1.5rem;
+}
+
+.benefits-legend li {
+  margin-bottom: 0.75rem;
+  break-inside: avoid;
+}
+
+@media (max-width: 768px) {
+  .benefits-legend ul {
+    columns: 1;
+  }
+  
+  .chart-container {
+    height: 300px;
+  }
+}

@@ -1,0 +1,112 @@
+.nutritional-gap-charts {
+  margin: 2rem 0;
+}
+
+.chart-summary {
+  background-color: #f0f7f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.chart-summary h3 {
+  color: #2c7744;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.top-gaps {
+  margin-top: 1.5rem;
+}
+
+.top-gaps h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.top-gaps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top-gaps li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nutrient-name {
+  font-weight: 600;
+  color: #2c7744;
+  margin-right: 0.5rem;
+}
+
+.gap-percentage {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.charts-container {
+  margin-top: 2rem;
+}
+
+.chart-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.chart-wrapper h3 {
+  color: #2c7744;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.chart-container {
+  height: 400px;
+  position: relative;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.radar-chart,
+.doughnut-chart {
+  height: 100%;
+}
+
+.overall-percentage {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.percentage-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c7744;
+  display: block;
+}
+
+.percentage-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .chart-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    height: 300px;
+  }
+}

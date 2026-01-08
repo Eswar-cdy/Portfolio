@@ -49,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${outfit.variable} ${plusJakarta.variable} antialiased bg-[var(--background)] text-[var(--foreground)]`}
       >
