@@ -1,8 +1,9 @@
+
 import NewsAPI from 'newsapi';
 import Parser from 'rss-parser';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// Ignore SVG/Canvas errors in test environment if needed
-// Configure parser to be more lenient with SSL if needed for scraping
+// Ignore SVG/Canvas errors in test environment
 const parser = new Parser({
     requestOptions: {
         rejectUnauthorized: false,
@@ -18,7 +19,9 @@ export interface NewsArticle {
     url: string;
     source: string;
     publishedAt: string;
-    category: 'Strategy' | 'Engineering' | 'Research'; // New Category Field
+    category: 'Strategy' | 'Engineering' | 'Research';
+    score?: number; // Added score field
+    reason?: string; // Added reason for score
 }
 
 // Prestigious Feed Sources
@@ -34,27 +37,98 @@ const ENGINEERING_FEEDS = [
     { url: 'https://feeds.feedburner.com/AmazonWebServicesBlog', name: 'AWS Architecture', category: 'Engineering' },
 ];
 
-export async function fetchTechNews(): Promise<NewsArticle[]> {
-    const articles: NewsArticle[] = [];
+/**
+ * ⚡️ Batch Scorer using Gemini Flash
+ * Filters out "noise" and finds high-impact engineering/strategy topics.
+ */
+async function rankArticles(candidates: NewsArticle[]): Promise<NewsArticle[]> {
+    if (candidates.length === 0) return [];
+    if (!process.env.GEMINI_API_KEY) {
+        console.warn("No GEMINI_API_KEY, skipping relevance ranking.");
+        return candidates.slice(0, 3);
+    }
 
-    // 1. Fetch from RSS Feeds (High Quality / Prestigious)
+    try {
+        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+        // Use Gemini 3 Flash Preview for high speed and low cost batch processing
+        const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
+
+        // Create a batch prompt
+        const candidatesList = candidates.map((c, i) =>
+            `ID ${i}: [${c.category}] ${c.title} (Source: ${c.source})`
+        ).join('\n');
+
+        const prompt = `
+        You are an Editor-in-Chief for a high-signal Engineering Blog.
+        Score these articles (1-10) based on their value for a Senior Product Engineer.
+
+        Criteria for High Score (>7):
+        - Architectural shifts (e.g., "Moving from Microservices to Monolith")
+        - Major AI breakthroughs (e.g., "GPT-5 Architecture")
+        - Strategic industry moves (e.g., "Nvidia acquiring Arm")
+        
+        Criteria for Low Score (<5):
+        - Minor bug fixes or patch notes
+        - Generic "Top 10 tools" lists
+        - Marketing fluff
+
+        Articles:
+        ${candidatesList}
+
+        Return a JSON array of objects with { "id": number, "score": number, "reason": "short string" }.
+        Return JSON ONLY. No markdown formatting.
+        `;
+
+        const result = await model.generateContent(prompt);
+        const text = result.response.text().replace(/```json/g, '').replace(/```/g, '').trim();
+        const scores = JSON.parse(text);
+
+        // Map scores back to articles
+        const scoredArticles = candidates.map((article, index) => {
+            const grade = scores.find((s: any) => s.id === index);
+            return {
+                ...article,
+                score: grade ? grade.score : 0,
+                reason: grade ? grade.reason : 'No score returned'
+            };
+        });
+
+        // Sort by score descending and return Top 3
+        console.log("💎 Relevance Ranking Complete. Top picks:");
+        const topPicks = scoredArticles
+            .sort((a, b) => (b.score || 0) - (a.score || 0))
+            .filter(a => (a.score || 0) >= 6) // Minimum quality bar
+            .slice(0, 3);
+
+        topPicks.forEach(a => console.log(`[${a.score}/10] ${a.title}`));
+
+        return topPicks.length > 0 ? topPicks : candidates.slice(0, 3); // Fallback if all low quality
+
+    } catch (error) {
+        console.error("Scoring failed:", error);
+        return candidates.slice(0, 3); // Fallback
+    }
+}
+
+export async function fetchTechNews(): Promise<NewsArticle[]> {
+    let candidates: NewsArticle[] = [];
+
+    // 1. Fetch from RSS Feeds
     console.log("Fetching RSS Feeds...");
     const allFeeds = [...RESEARCH_FEEDS, ...ENGINEERING_FEEDS];
 
     for (const feed of allFeeds) {
         try {
             const feedResult = await parser.parseURL(feed.url);
-            // Take top 1 recent item from each feed
-            const recentItems = feedResult.items.slice(0, 1).filter(item => {
+            // Fetch MORE candidates (top 2) to give the Ranker more options
+            const recentItems = feedResult.items.slice(0, 2).filter(item => {
                 const pubDate = item.pubDate ? new Date(item.pubDate) : new Date();
-                const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000);
-                // Relax filter for testing if no recent posts
                 const lastWeek = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
                 return pubDate > lastWeek;
             });
 
             recentItems.forEach(item => {
-                articles.push({
+                candidates.push({
                     title: item.title || 'Untitled',
                     description: item.contentSnippet || item.content || '',
                     url: item.link || '',
@@ -68,27 +142,27 @@ export async function fetchTechNews(): Promise<NewsArticle[]> {
         }
     }
 
-    // 2. Fetch from NewsAPI (Broad Industry News) - fallback or supplementary
+    // 2. Fetch from NewsAPI
     if (process.env.NEWS_API_KEY) {
         try {
             const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
             const response = await newsapi.v2.everything({
-                q: '(product strategy OR startup acquisition OR tech ipo)',
+                q: '(product strategy OR "system design" OR "AI architecture")', // More specific queries
                 language: 'en',
                 sortBy: 'popularity',
-                from: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
-                pageSize: 3,
+                from: new Date(Date.now() - 48 * 60 * 60 * 1000).toISOString(), // 48 hours
+                pageSize: 5, // Get 5 candidates
             });
 
             if (response.status === 'ok') {
                 response.articles.forEach((article: any) => {
-                    articles.push({
+                    candidates.push({
                         title: article.title,
                         description: article.description,
                         url: article.url,
                         source: article.source.name,
                         publishedAt: article.publishedAt,
-                        category: 'Strategy' // NewsAPI usually maps to broad Strategy/Industry news
+                        category: 'Strategy'
                     });
                 });
             }
@@ -97,6 +171,11 @@ export async function fetchTechNews(): Promise<NewsArticle[]> {
         }
     }
 
-    // Shuffle and return top 3 mixed items
-    return articles.sort(() => 0.5 - Math.random()).slice(0, 3);
+    // Deduplicate by URL or Title
+    candidates = candidates.filter((v, i, a) => a.findIndex(t => (t.url === v.url || t.title === v.title)) === i);
+
+    console.log(`Found ${candidates.length} candidates. Ranking...`);
+
+    // 3. Apply Batch Scoring
+    return await rankArticles(candidates);
 }

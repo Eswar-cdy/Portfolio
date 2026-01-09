@@ -1,5 +1,8 @@
+
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NewsArticle } from './newsAggregator';
+import fs from 'fs';
+import path from 'path';
 
 export async function generateBlogPost(article: NewsArticle): Promise<string | null> {
   if (!process.env.GEMINI_API_KEY) {
@@ -8,8 +11,19 @@ export async function generateBlogPost(article: NewsArticle): Promise<string | n
   }
 
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  // Using gemini-flash-latest alias which is available for this key
-  const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
+  // Using gemini-3-flash-preview for the latest inference capabilities
+  const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
+
+  // 1. Load Personal Context (Voice)
+  let personalContext = "";
+  try {
+    const contextPath = path.join(process.cwd(), 'src/lib/config/context.md');
+    if (fs.existsSync(contextPath)) {
+      personalContext = fs.readFileSync(contextPath, 'utf-8');
+    }
+  } catch (e) {
+    console.warn("Could not load context.md:", e);
+  }
 
   let promptContext = "";
 
@@ -44,13 +58,21 @@ export async function generateBlogPost(article: NewsArticle): Promise<string | n
   }
 
   const prompt = `
-    You are Eswar Ajay, a Product Strategist and Engineer. 
+    You are Eswar Ajay. Below is your PERSONAL CONTEXT (Voice, Bio, Opinions).
+    You MUST adopt this persona, voice, and philosophy.
+    
+    === PERSONAL CONTEXT ===
+    ${personalContext}
+    ========================
+
     Write a blog post about this [${article.category}] article:
     
     Title: ${article.title}
     Source: ${article.source}
     Context: ${article.description}
     Link: ${article.url}
+    Evaluation Score: ${article.score || 'N/A'}/10
+    Evaluation Reason: ${article.reason || 'N/A'}
 
     ${promptContext}
 
@@ -63,8 +85,10 @@ export async function generateBlogPost(article: NewsArticle): Promise<string | n
         description: "Your description."
         tags: ["${article.category}", "AI", "Strategy"]
         category: "${article.category}"
+        image_prompt: "A detailed DALL-E 3 prompt to generate a geometric, minimalist header image for this post. Dark aesthetic."
         ---
     - Keep it under 600 words. Intelligent, concise, professional.
+    - Reference "Green Engine" or "Collaborative Ecosystem" ONLY if truly relevant to the tech stack (IoT/Platform) being discussed.
   `;
 
   try {
