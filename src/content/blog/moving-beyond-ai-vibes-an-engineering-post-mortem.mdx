@@ -1,0 +1,31 @@
+---
+title: "Moving Beyond AI Vibes: An Engineering Post-Mortem"
+date: "2026-01-15"
+description: "Why 85% of enterprise AI projects fail—and how to engineer your way out of PoC Purgatory."
+tags: ["Engineering", "AI", "Strategy"]
+category: "Engineering"
+image_prompt: "A high-contrast, minimalist architectural blueprint of a neural network being integrated into a rigid geometric grid. Dark mode aesthetic, charcoal gray and electric blue accents, isometric perspective, clean lines."
+---
+
+The statistics are sobering: nearly 85% of enterprise AI projects never make it past the demo stage. In my experience bridging business strategy with engineering reality, the culprit is rarely the "AI" itself. The models are usually fine. The failure lies in treating AI like a science experiment rather than a systems engineering challenge.
+
+### 1. The Challenge: The "PoC Purgatory"
+The primary hurdle isn't getting a model to answer a question; it's getting it to do so reliably, securely, and cost-effectively at scale. Enterprises fall into "PoC Purgatory" because they mistake a successful Jupyter Notebook for a product. 
+
+In my work on the **Collaborative Ecosystem**, I saw similar patterns in marketplace dynamics—initial enthusiasm for a "cool feature" often masks the underlying complexity of system integration. With AI, this manifest as "vibe-based development," where a project is greenlit because a few prompts worked on a developer's laptop, only to crumble under real-world edge cases and API latency.
+
+### 2. The Architecture: From Notebooks to Robust Pipelines
+To move from a demo to a production-grade system, the architecture must shift from a monolithic "magic box" to a modular pipeline. Key patterns include:
+
+*   **Decoupled Logic**: Refactoring non-linear notebooks into testable Python packages. The training environment and inference code must be separate to ensure scalability.
+*   **Semantic Caching**: Implementing layers like GPTCache. In a business context, ROI is killed by "chatty" agents. If two users ask the same question, the system shouldn't pay for the same tokens twice.
+*   **The Agent Swarm**: Instead of one "Generalist" bot that suffers from context dilution, a better architecture mimics a **Collaborative Ecosystem**—a swarm of specialized, narrow agents (HR bot, Finance bot, Tech bot) orchestrated by a central router. This keeps the context window clean and the accuracy high.
+
+### 3. Takeaway: System Design Over Model Hype
+My take is simple: **The best AI model is useless without a rigorous data pipeline.** 
+
+Enterprise AI is 10% model selection and 90% data engineering. We need to stop obsessing over whether Llama 3 is 2% better than GPT-4 and start focusing on "Data Ops"—cleaning, chunking, and verifying the data that feeds the RAG (Retrieval-Augmented Generation) system. 
+
+If you aren't running automated, deterministic evaluations against a "Golden Dataset," you aren't engineering; you're guessing. Real business value comes from building the boring infrastructure—caching, routing, and monitoring—that keeps the "magic" running without breaking the bank.
+
+**Engineering Reality Check**: If it doesn't solve a user problem reliably, it's just expensive code. Build for the system, not for the hype.
