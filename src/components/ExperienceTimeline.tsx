@@ -5,24 +5,38 @@ import { motion } from 'framer-motion';
 const experiences = [
     {
         role: "Product Strategy & Development",
-        company: "Freelance / Concept",
+        company: "Freelance",
         period: "2024 - Present",
         description: "Developing 'Green Engine' (AgriTech) and 'Collaborative Ecosystem' platforms. Applying product thinking to solve real-world efficiency problems.",
         skills: ["Product Vision", "Full Stack Dev", "GTM Strategy"]
     },
     {
-        role: "Business Analyst Trainee",
-        company: "Tech Mahindra",
-        period: "2022 - 2023",
-        description: "Analyzed business requirements for telecom clients. Reduced reporting turnaround time by 40% using automated SQL pipelines.",
-        skills: ["SQL", "PowerBI", "Requirement Gathering", "JIRA"]
-    },
-    {
         role: "Master's in Information Systems",
         company: "Harrisburg University",
-        period: "2023 - 2025",
-        description: "specializing in Tech Entrepreneurship and Project Management.",
+        period: "Aug 2023 - Dec 2025",
+        description: "Specializing in Tech Entrepreneurship and Project Management.",
         skills: ["Agile", "System Design", "Leadership"]
+    },
+    {
+        role: "Project Lead",
+        company: "Apr Hub Technologies",
+        period: "Dec 2022 – Jun 2023",
+        description: "Led data-driven projects utilizing Machine Learning and Statistical Analysis to drive actionable business insights.",
+        skills: ["Machine Learning", "Statistical Analysis", "Team Leadership"]
+    },
+    {
+        role: "Senior Data Analyst",
+        company: "Apr Hub Technologies",
+        period: "Sep 2021 – Dec 2022",
+        description: "Conducted Exploratory Data Analysis and implemented predictive models using KNN, Random Forest, and Decision Trees.",
+        skills: ["EDA", "Python", "Matplotlib", "Random Forest", "KNN"]
+    },
+    {
+        role: "Data Analyst",
+        company: "Apr Hub Technologies",
+        period: "Sep 2020 – Nov 2021",
+        description: "Specialized in ETL processes, data visualization with Power BI, and complex T-SQL queries for reporting automation.",
+        skills: ["Power BI", "DAX", "T-SQL", "SSIS", "ETL"]
     }
 ];
 

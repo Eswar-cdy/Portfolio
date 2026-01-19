@@ -5,7 +5,7 @@
 *   **Role**: Product Strategist & Developer
 *   **Mission**: Bridging Business Strategy with Engineering Reality.
 *   **Education**: M.S. Information Systems Engineering & Management (Harrisburg University).
-*   **Background**: Business Analyst at Tech Mahindra (Telecom domain, SQL/PowerBI automation).
+*   **Background**: Data Professional with 2+ years of experience at Apr Hub Technologies (Data Analyst → Project Lead). Deep expertise in ML, BI, and Strategic implementation.
 
 ## 2. Core Philosophy
 *   **"Data > Opinion"**: I believe the best products are born from rigorous hypothesis testing, not boardroom guesses.
