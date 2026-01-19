@@ -1,77 +1,117 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Rocket, GraduationCap, Briefcase, TrendingUp, Database, Calendar, Building2 } from 'lucide-react';
 
 const experiences = [
     {
         role: "Product Strategy & Development",
-        company: "Freelance",
+        company: "Freelance / Projects",
         period: "2024 - Present",
-        description: "Developing 'Green Engine' (AgriTech) and 'Collaborative Ecosystem' platforms. Applying product thinking to solve real-world efficiency problems.",
-        skills: ["Product Vision", "Full Stack Dev", "GTM Strategy"]
+        description: "Developing comprehensive MVPs for 'Green Engine' (AgriTech) and 'Collaborative Ecosystem'. Conducting early-stage user research and system architecture design.",
+        skills: ["Product Vision", "Full Stack Dev", "GTM Strategy"],
+        icon: Rocket,
+        color: "text-pink-500"
     },
     {
         role: "Master's in Information Systems",
         company: "Harrisburg University",
         period: "Aug 2023 - Dec 2025",
         description: "Specializing in Tech Entrepreneurship and Project Management.",
-        skills: ["Agile", "System Design", "Leadership"]
+        skills: ["Agile", "System Design", "Leadership"],
+        icon: GraduationCap,
+        color: "text-purple-500"
     },
     {
         role: "Project Lead",
         company: "Apr Hub Technologies",
         period: "Dec 2022 – Jun 2023",
         description: "Led data-driven projects utilizing Machine Learning and Statistical Analysis to drive actionable business insights.",
-        skills: ["Machine Learning", "Statistical Analysis", "Team Leadership"]
+        skills: ["JIRA", "Statistical Analysis", "Team Leadership"],
+        icon: TrendingUp,
+        color: "text-blue-500"
     },
     {
         role: "Senior Data Analyst",
         company: "Apr Hub Technologies",
         period: "Sep 2021 – Dec 2022",
         description: "Conducted Exploratory Data Analysis and implemented predictive models using KNN, Random Forest, and Decision Trees.",
-        skills: ["EDA", "Python", "Matplotlib", "Random Forest", "KNN"]
+        skills: ["Python", "Matplotlib", "Random Forest", "KNN"],
+        icon: Briefcase,
+        color: "text-indigo-500"
     },
     {
         role: "Data Analyst",
         company: "Apr Hub Technologies",
         period: "Sep 2020 – Nov 2021",
         description: "Specialized in ETL processes, data visualization with Power BI, and complex T-SQL queries for reporting automation.",
-        skills: ["Power BI", "DAX", "T-SQL", "SSIS", "ETL"]
+        skills: ["Power BI", "DAX", "SQL Server", "ETL"],
+        icon: Database,
+        color: "text-cyan-500"
     }
 ];
 
 export default function ExperienceTimeline() {
     return (
-        <div className="max-w-4xl mx-auto space-y-8">
-            {experiences.map((exp, index) => (
-                <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="relative pl-8 border-l-2 border-gray-200 dark:border-slate-800 last:border-0"
-                >
-                    <div className="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-[var(--primary)] ring-4 ring-white dark:ring-slate-950" />
+        <div className="max-w-4xl mx-auto px-4 md:px-0">
+            <div className="relative space-y-12">
+                {/* Continuous Vertical Date Line */}
+                <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--primary)] via-[var(--secondary)] to-transparent opacity-20" />
 
-                    <div className="mb-1 text-sm text-[var(--primary)] font-bold uppercase tracking-wider">
-                        {exp.period}
-                    </div>
-                    <h3 className="text-2xl font-bold text-[var(--foreground)]">
-                        {exp.role} <span className="text-gray-400 font-normal">@ {exp.company}</span>
-                    </h3>
-                    <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl">
-                        {exp.description}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                        {exp.skills.map(s => (
-                            <span key={s} className="px-2 py-1 bg-gray-100 dark:bg-slate-800 text-xs rounded-md text-gray-500">
-                                {s}
-                            </span>
-                        ))}
-                    </div>
-                </motion.div>
-            ))}
+                {experiences.map((exp, index) => {
+                    const Icon = exp.icon;
+                    return (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            className="relative flex gap-8 group"
+                        >
+                            {/* Icon Node */}
+                            <div className="relative z-10 flex-none w-16 h-16 rounded-full glass-card flex items-center justify-center border border-white/20 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <div className={`absolute inset-0 rounded-full opacity-20 blur-lg ${exp.color.replace('text', 'bg')}`} />
+                                <Icon className={`w-7 h-7 ${exp.color}`} />
+                            </div>
+
+                            {/* Content Card */}
+                            <div className="flex-1 glass-card p-6 rounded-2xl hover:border-[var(--primary)]/30 transition-colors duration-300 group-hover:shadow-2xl group-hover:shadow-[var(--primary)]/5">
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                                    <div>
+                                        <h3 className="text-xl md:text-2xl font-bold text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
+                                            {exp.role}
+                                        </h3>
+                                        <div className="flex items-center gap-2 text-gray-500 mt-1 dark:text-gray-400">
+                                            <Building2 size={16} />
+                                            <span className="font-medium text-sm md:text-base">{exp.company}</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 dark:bg-slate-900 border border-gray-200 dark:border-slate-800 text-xs font-semibold uppercase tracking-wider text-gray-500 w-fit">
+                                        <Calendar size={14} />
+                                        {exp.period}
+                                    </div>
+                                </div>
+
+                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    {exp.description}
+                                </p>
+
+                                <div className="flex flex-wrap gap-2">
+                                    {exp.skills.map(s => (
+                                        <span
+                                            key={s}
+                                            className="px-3 py-1 bg-[var(--background)]/50 border border-gray-200 dark:border-slate-800 rounded-lg text-xs font-medium text-gray-500 dark:text-gray-400 group-hover:border-[var(--primary)]/20 transition-colors"
+                                        >
+                                            {s}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
+                    );
+                })}
+            </div>
         </div>
     );
 }

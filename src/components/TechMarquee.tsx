@@ -25,7 +25,7 @@ export default function TechMarquee() {
                 }}
             >
                 {/* Repeating Content 3 times to ensure smooth loop */}
-                {[...skills, ...skills, ...skills].map((skill, index) => (
+                {[...skills, ...skills].map((skill, index) => (
                     <div key={index} className="flex items-center gap-2 text-2xl font-bold text-gray-300 hover:text-[var(--primary)] transition-colors cursor-default">
                         <span className="text-[var(--accent)] not-italic">#</span> {skill}
                     </div>

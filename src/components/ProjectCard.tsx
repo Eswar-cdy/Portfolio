@@ -37,7 +37,7 @@ export default function ProjectCard({ title, description, tags, link, githubLink
                             </Link>
                         )}
                         {link && (
-                            <Link href={link} target="_blank" className="p-2 text-gray-500 hover:text-[var(--primary)] hover:bg-[var(--primary)]/10 rounded-full transition-all" title="View Live">
+                            <Link href={link} target="_blank" className="p-2 text-gray-500 hover:text-[var(--primary)] hover:bg-[var(--primary)]/10 rounded-full transition-all" title="View Project">
                                 <ExternalLink size={20} />
                             </Link>
                         )}
