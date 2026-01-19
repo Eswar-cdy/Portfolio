@@ -64,20 +64,8 @@ export default function ProjectCard({ title, description, tags, link, githubLink
                     {/* Footer Action */}
                     <div className="pt-4 mt-auto border-t border-gray-100 dark:border-slate-800 flex items-center justify-between">
                         <span className="text-sm font-medium text-gray-400">
-                            {githubLink ? "Open Source" : "Proprietary"}
+                            {githubLink ? "Open Source (Personal)" : "Proprietary"}
                         </span>
-                        {githubLink ? (
-                            <Link href={githubLink} target="_blank" className="inline-flex items-center text-sm font-bold text-[var(--foreground)] hover:gap-2 transition-all">
-                                Check Repo <ArrowRight size={16} className="ml-1" />
-                            </Link>
-                        ) : link ? (
-                            <Link href={link} target="_blank" className="inline-flex items-center text-sm font-bold text-[var(--primary)] hover:gap-2 transition-all">
-                                View Project <ArrowRight size={16} className="ml-1" />
-                            </Link>
-                        ) :
-                            (
-                                <span className="text-sm italic text-gray-400">Case Study On Request</span>
-                            )}
                     </div>
                 </div>
             </div>

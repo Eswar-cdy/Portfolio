@@ -6,9 +6,9 @@ import { Rocket, GraduationCap, Briefcase, TrendingUp, Database, Calendar, Build
 const experiences = [
     {
         role: "Product Strategy & Development",
-        company: "Freelance / Projects",
+        company: "Freelance",
         period: "2024 - Present",
-        description: "Developing comprehensive MVPs for 'Green Engine' (AgriTech) and 'Collaborative Ecosystem'. Conducting early-stage user research and system architecture design.",
+        description: "Personal/freelance MVP builds for 'Green Engine' (AgriTech) and 'Collaborative Ecosystem'; not yet in production. Conducting early-stage user research and system architecture design.",
         skills: ["Product Vision", "Full Stack Dev", "GTM Strategy"],
         icon: Rocket,
         color: "text-pink-500"
@@ -53,7 +53,7 @@ const experiences = [
 
 export default function ExperienceTimeline() {
     return (
-        <div className="max-w-4xl mx-auto px-4 md:px-0">
+        <div className="max-w-4xl mx-auto px-4 md:px-0 pb-20">
             <div className="relative space-y-12">
                 {/* Continuous Vertical Date Line */}
                 <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--primary)] via-[var(--secondary)] to-transparent opacity-20" />

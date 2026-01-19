@@ -39,7 +39,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            Available for Product & Engineering Roles
+            Open to Product & Engineering Roles
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[var(--foreground)]">
@@ -88,38 +88,38 @@ export default function Home() {
             <div className="lg:col-span-2">
               <ProjectCard
                 title="Green Engine"
-                description="An IoT & Computer Vision platform prototype. In controlled tests, it demonstrated a 15% reduction in crop yield variance by integrating hardware sensors with a Python FastAPI backend."
+                description="An IoT & Computer Vision platform prototype. In small-scale controlled tests, it demonstrated a 15% reduction in crop yield variance by integrating hardware sensors with a Python FastAPI backend."
                 tags={["Python", "FastAPI", "Computer Vision", "IoT", "React"]}
                 color="bg-green-500"
                 // Placeholder link - User should update if specific repo exists
                 githubLink="https://github.com/Eswar-cdy/Green-Engine"
-                link="/projects/microgreen"
+                link="https://eswarajay.com/projects/microgreen"
               />
             </div>
             <ProjectCard
               title="Collaborative Ecosystem"
-              description="Designed the MVP for a two-sided academic marketplace to connect researchers with resources. Focused on platform strategy and system design validation."
+              description="MVP design for a two-sided academic marketplace to connect researchers with resources. Focused on platform strategy and system design validation."
               tags={["System Design", "Platform Strategy", "Next.js", "PostgreSQL"]}
               color="bg-purple-500"
               githubLink="https://github.com/Eswar-cdy/Collaborative-Ecosystem"
-              link="/projects/collaborative-ecosystem"
+              link="https://eswarajay.com/projects/collaborative-ecosystem"
             />
             <ProjectCard
               title="Smart Roofing"
-              description="Developed a risk mitigation dashboard concept for industrial roofing. Simulates IoT data streams to predict maintenance needs and prevent failures."
+              description="Developed a risk mitigation dashboard concept for industrial roofing. Simulates IoT data streams to flag potential risk areas and suggest maintenance windows in a simulated environment."
               tags={["IoT Strategy", "Data Visualization", "React", "D3.js"]}
               color="bg-blue-500"
               githubLink="https://github.com/Eswar-cdy/Smart-Roofing"
-              link="/projects/smart-roofing"
+              link="https://eswarajay.com/projects/smart-roofing"
             />
             <div className="lg:col-span-2">
               <ProjectCard
                 title="Maverick Aim Rush"
-                description="Gamified fitness application prototype. Achieved ~50% increase in user engagement metrics during internal pilot testing."
+                description="Gamified fitness application prototype. Achieved ~50% increase in prototype engagement metrics during internal pilot testing."
                 tags={["Gamification", "Unity", "C#", "User Retention Strategy"]}
                 color="bg-amber-500"
                 githubLink="https://github.com/Eswar-cdy/Maverick-Aim-Rush"
-                link="/projects/launch-sim"
+                link="https://eswarajay.com/projects/launch-sim"
               />
             </div>
           </div>

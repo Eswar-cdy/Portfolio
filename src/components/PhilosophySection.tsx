@@ -84,7 +84,7 @@ export default function PhilosophySection() {
                             <h3 className="text-xl font-bold">Tech Arsenal</h3>
                         </div>
                         <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
-                            Building scalable systems that turn raw data into interactions.
+                            This is the toolkit used across the projects above to turn raw data into decisions.
                         </p>
                         <div className="flex flex-wrap gap-2">
                             {["Next.js", "Python", "SQL", "FastAPI", "OpenAI API"].map(tech => (
