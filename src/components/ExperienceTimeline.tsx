@@ -8,7 +8,7 @@ const experiences = [
         role: "Product Strategy & Development",
         company: "Freelance",
         period: "2024 - Present",
-        description: "Personal/freelance MVP builds for 'Green Engine' (AgriTech) and 'Collaborative Ecosystem'; not yet in production. Conducting early-stage user research and system architecture design.",
+        description: "Personal/freelance MVP builds for 'Green Engine' (AgriTech) and 'Collaborative Ecosystem'; not yet in production. Leaning on prior analytics experience to define metrics and instrumentation for MVPs from day one.",
         skills: ["Product Vision", "Full Stack Dev", "GTM Strategy"],
         icon: Rocket,
         color: "text-pink-500"
@@ -26,7 +26,7 @@ const experiences = [
         role: "Project Lead",
         company: "Apr Hub Technologies",
         period: "Dec 2022 – Jun 2023",
-        description: "Led data-driven projects utilizing Machine Learning and Statistical Analysis to drive actionable business insights.",
+        description: "Led data-driven projects utilizing Machine Learning. Coordinated a team of 4 to deliver ML models under tight deadlines, aligning stakeholders via JIRA.",
         skills: ["JIRA", "Statistical Analysis", "Team Leadership"],
         icon: TrendingUp,
         color: "text-blue-500"
@@ -35,7 +35,7 @@ const experiences = [
         role: "Senior Data Analyst",
         company: "Apr Hub Technologies",
         period: "Sep 2021 – Dec 2022",
-        description: "Conducted Exploratory Data Analysis and implemented predictive models using KNN, Random Forest, and Decision Trees.",
+        description: "Conducted Exploratory Data Analysis and implemented predictive models. Built classification models for customer segmentation, enabling targeted marketing strategies.",
         skills: ["Python", "Matplotlib", "Random Forest", "KNN"],
         icon: Briefcase,
         color: "text-indigo-500"
@@ -44,7 +44,7 @@ const experiences = [
         role: "Data Analyst",
         company: "Apr Hub Technologies",
         period: "Sep 2020 – Nov 2021",
-        description: "Specialized in ETL processes, data visualization with Power BI, and complex T-SQL queries for reporting automation.",
+        description: "Specialized in ETL processes and Power BI. Automated 5+ recurring weekly reports, reducing manual data processing effort by 40%.",
         skills: ["Power BI", "DAX", "SQL Server", "ETL"],
         icon: Database,
         color: "text-cyan-500"
@@ -53,7 +53,7 @@ const experiences = [
 
 export default function ExperienceTimeline() {
     return (
-        <div className="max-w-4xl mx-auto px-4 md:px-0 pb-20">
+        <div className="max-w-4xl mx-auto px-4 md:px-0 pb-24">
             <div className="relative space-y-12">
                 {/* Continuous Vertical Date Line */}
                 <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-[var(--primary)] via-[var(--secondary)] to-transparent opacity-20" />

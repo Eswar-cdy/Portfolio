@@ -34,12 +34,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 dark:border-slate-800 bg-gray-50/50 dark:bg-slate-900/50 backdrop-blur-sm text-sm font-medium text-gray-600 dark:text-gray-300">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            Open to Product & Engineering Roles
+          <div className="flex flex-col items-center gap-3 mb-6">
+            <span className="text-sm font-bold text-[var(--primary)] uppercase tracking-widest">Product & Engineering</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 dark:border-slate-800 bg-gray-50/50 dark:bg-slate-900/50 backdrop-blur-sm text-sm font-medium text-gray-600 dark:text-gray-300">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              Open to Product & Engineering Roles
+            </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[var(--foreground)]">
@@ -47,9 +50,14 @@ export default function Home() {
             with <span className="text-[var(--foreground)]">Engineering Reality.</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-            I don't just build software; I build <span className="font-semibold text-[var(--foreground)]">data-driven products</span> that solve ambiguous business problems.
-          </p>
+          <div className="max-w-2xl mx-auto space-y-4">
+            <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-light leading-relaxed">
+              From idea → prototype → metrics, with a strong bias for experiments over assumptions.
+            </p>
+            <p className="text-base md:text-lg text-gray-400 dark:text-gray-500">
+              Currently building MVPs in AgriTech and academic platforms while completing a Master’s in Information Systems.
+            </p>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-4 pt-6">
             <a href="#projects" className="px-8 py-3 rounded-full bg-[var(--foreground)] text-[var(--background)] font-bold transition-transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
@@ -88,10 +96,11 @@ export default function Home() {
             <div className="lg:col-span-2">
               <ProjectCard
                 title="Green Engine"
-                description="An IoT & Computer Vision platform prototype. In small-scale controlled tests, it demonstrated a 15% reduction in crop yield variance by integrating hardware sensors with a Python FastAPI backend."
+                description="An IoT & Computer Vision platform prototype. In small-scale controlled tests, it demonstrated a ~15% reduction in crop yield variance by integrating hardware sensors with a Python FastAPI backend."
+                problem="Small growers struggle to monitor micro-environment conditions consistently."
+                role="Designed the monitoring workflow and built the sensor → FastAPI → dashboard pipeline."
                 tags={["Python", "FastAPI", "Computer Vision", "IoT", "React"]}
                 color="bg-green-500"
-                // Placeholder link - User should update if specific repo exists
                 githubLink="https://github.com/Eswar-cdy/Green-Engine"
                 link="https://eswarajay.com/projects/microgreen"
               />
@@ -99,6 +108,8 @@ export default function Home() {
             <ProjectCard
               title="Collaborative Ecosystem"
               description="MVP design for a two-sided academic marketplace to connect researchers with resources. Focused on platform strategy and system design validation."
+              problem="Fragmented academic resources limit research collaboration."
+              role="Designed the MVP architecture and validated the core matching algorithm."
               tags={["System Design", "Platform Strategy", "Next.js", "PostgreSQL"]}
               color="bg-purple-500"
               githubLink="https://github.com/Eswar-cdy/Collaborative-Ecosystem"
@@ -106,7 +117,9 @@ export default function Home() {
             />
             <ProjectCard
               title="Smart Roofing"
-              description="Developed a risk mitigation dashboard concept for industrial roofing. Simulates IoT data streams to flag potential risk areas and suggest maintenance windows in a simulated environment."
+              description="Prototype dashboard for industrial roofing risk mitigation. Simulates IoT data streams to flag potential risk areas and suggest maintenance windows in a simulated environment."
+              problem="Industrial roofing maintenance is reactive and costly."
+              role="Created the risk mitigation logic and visualized IoT data streams."
               tags={["IoT Strategy", "Data Visualization", "React", "D3.js"]}
               color="bg-blue-500"
               githubLink="https://github.com/Eswar-cdy/Smart-Roofing"
@@ -116,6 +129,8 @@ export default function Home() {
               <ProjectCard
                 title="Maverick Aim Rush"
                 description="Gamified fitness application prototype. Achieved ~50% increase in prototype engagement metrics during internal pilot testing."
+                problem="Fitness apps suffer from high user churn due to lack of immediate feedback."
+                role="Implemented gamification mechanics (streaks, rewards) to boost retention."
                 tags={["Gamification", "Unity", "C#", "User Retention Strategy"]}
                 color="bg-amber-500"
                 githubLink="https://github.com/Eswar-cdy/Maverick-Aim-Rush"

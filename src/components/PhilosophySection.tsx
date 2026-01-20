@@ -47,10 +47,16 @@ export default function PhilosophySection() {
                                 "I believe the best products are born from rigorous hypothesis testing, not boardroom guesses. Data &gt; Opinion."
                             </blockquote>
                         </div>
-                        <div className="flex gap-4 mt-4">
-                            <span className="px-4 py-2 bg-emerald-50 dark:bg-emerald-900/10 text-emerald-700 dark:text-emerald-400 text-sm font-semibold rounded-full">User-Centric</span>
-                            <span className="px-4 py-2 bg-emerald-50 dark:bg-emerald-900/10 text-emerald-700 dark:text-emerald-400 text-sm font-semibold rounded-full">Data-Driven</span>
-                        </div>
+                        <ul className="mt-6 space-y-3 text-gray-600 dark:text-gray-300">
+                            <li className="flex gap-3 items-center">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                Start from problem framing and constraints.
+                            </li>
+                            <li className="flex gap-3 items-center">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                                Define success metrics and basic experiment before writing code.
+                            </li>
+                        </ul>
                     </motion.div>
 
                     {/* 2. Education (Side Card) */}
@@ -85,6 +91,8 @@ export default function PhilosophySection() {
                         </div>
                         <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">
                             This is the toolkit used across the projects above to turn raw data into decisions.
+                            <br /><br />
+                            <span className="font-semibold text-slate-700 dark:text-slate-300">Strategy:</span> Next.js + FastAPI for fast experiments, SQL/Python for analytics.
                         </p>
                         <div className="flex flex-wrap gap-2">
                             {["Next.js", "Python", "SQL", "FastAPI", "OpenAI API"].map(tech => (
@@ -110,7 +118,7 @@ export default function PhilosophySection() {
                                     <Search size={16} className="text-purple-500" /> Discovery
                                 </h4>
                                 <ul className="text-sm text-gray-500 dark:text-gray-400 space-y-1">
-                                    <li>User Interviews</li>
+                                    <li>User Interviews → JTBD summaries & opportunity areas.</li>
                                     <li>Journey Mapping</li>
                                     <li>Requirement Gathering</li>
                                 </ul>
@@ -120,8 +128,7 @@ export default function PhilosophySection() {
                                     <Database size={16} className="text-purple-500" /> Analysis
                                 </h4>
                                 <ul className="text-sm text-gray-500 dark:text-gray-400 space-y-1">
-                                    <li>SQL & BigQuery</li>
-                                    <li>PowerBI / Tableau</li>
+                                    <li>SQL/Power BI → dashboards used to monitor KPIs.</li>
                                     <li>Excel (Advanced)</li>
                                 </ul>
                             </div>
@@ -130,7 +137,7 @@ export default function PhilosophySection() {
                                     <Layout size={16} className="text-purple-500" /> Documentation
                                 </h4>
                                 <ul className="text-sm text-gray-500 dark:text-gray-400 space-y-1">
-                                    <li>PRDs & User Stories</li>
+                                    <li>PRDs & User Stories → used to align dev scope.</li>
                                     <li>Process Flows (Jira)</li>
                                     <li>Wireframing Tools</li>
                                 </ul>
@@ -138,7 +145,7 @@ export default function PhilosophySection() {
                         </div>
                     </motion.div>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 }

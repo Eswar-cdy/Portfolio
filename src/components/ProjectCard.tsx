@@ -8,13 +8,15 @@ interface ProjectCardProps {
     title: string;
     description: string | React.ReactNode;
     tags: string[];
+    problem?: string;   // Brief problem statement
+    role?: string;      // My role description
     link?: string;      // Make optional
     githubLink?: string; // Add separate GitHub link
     color?: string;     // formatting color class
     image?: string;     // Optional image
 }
 
-export default function ProjectCard({ title, description, tags, link, githubLink, color = "bg-blue-500", image }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tags, problem, role, link, githubLink, color = "bg-blue-500", image }: ProjectCardProps) {
     return (
         <motion.div
             whileHover={{ y: -5 }}
@@ -45,7 +47,25 @@ export default function ProjectCard({ title, description, tags, link, githubLink
                 </div>
 
                 <div className="text-gray-600 dark:text-gray-400 mb-6 flex-1 text-base leading-relaxed">
-                    {description}
+                    <div className="mb-4">{description}</div>
+
+                    {/* Problem & Role Bullets */}
+                    {(problem || role) && (
+                        <ul className="space-y-2 mt-4 text-sm bg-gray-50 dark:bg-slate-950/50 p-4 rounded-xl border border-gray-100 dark:border-slate-800">
+                            {problem && (
+                                <li className="flex gap-2">
+                                    <span className="font-semibold text-[var(--foreground)] whitespace-nowrap">Problem:</span>
+                                    <span>{problem}</span>
+                                </li>
+                            )}
+                            {role && (
+                                <li className="flex gap-2">
+                                    <span className="font-semibold text-[var(--foreground)] whitespace-nowrap">My Role:</span>
+                                    <span>{role}</span>
+                                </li>
+                            )}
+                        </ul>
+                    )}
                 </div>
 
                 {/* Tech Stack Chips */}
