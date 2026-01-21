@@ -64,7 +64,7 @@ export default function Home() {
               View My Work <ArrowDown size={18} />
             </a>
             <a
-              href="/Eswar_Ajay_Product_Innovation.pdf"
+              href="/Eswar_Ajay_Resume_Jan_2026.docx"
               download
               className="px-8 py-3 rounded-full border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors font-medium"
             >

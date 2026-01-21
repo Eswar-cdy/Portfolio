@@ -38,7 +38,7 @@ export default function Navbar() {
                         </a>
 
                         <a
-                            href="/Eswar_Ajay_Product_Innovation.pdf"
+                            href="/Eswar_Ajay_Resume_Jan_2026.docx"
                             target="_blank"
                             className="px-4 py-2 rounded-full bg-[var(--primary)] text-white hover:opacity-90 transition-opacity text-sm font-bold flex items-center gap-2 shadow-sm"
                         >
@@ -71,7 +71,7 @@ export default function Navbar() {
                         <Link href="/blog" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[var(--primary)] dark:text-gray-300">
                             Blog
                         </Link>
-                        <a href="/Eswar_Ajay_Product_Innovation.pdf" target="_blank" className="block px-3 py-2 rounded-md text-base font-medium text-[var(--primary)] font-bold">
+                        <a href="/Eswar_Ajay_Resume_Jan_2026.docx" target="_blank" className="block px-3 py-2 rounded-md text-base font-medium text-[var(--primary)] font-bold">
                             Resume
                         </a>
                     </div>

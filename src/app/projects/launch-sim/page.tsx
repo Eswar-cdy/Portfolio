@@ -329,7 +329,7 @@ export default function WorkoutTrackerPage() {
                             Schedule a Chat
                         </a>
                         <a
-                            href="/Eswar_Ajay_Product_Innovation.pdf"
+                            href="/Eswar_Ajay_Resume_Jan_2026.docx"
                             target="_blank"
                             className="px-8 py-3 bg-white dark:bg-slate-800 text-gray-900 dark:text-white border border-gray-200 dark:border-slate-700 font-bold rounded-full hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
                         >
