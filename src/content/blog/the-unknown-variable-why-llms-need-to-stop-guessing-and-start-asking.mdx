@@ -1,0 +1,41 @@
+---
+title: "The 'Unknown' Variable: Why LLMs Need to Stop Guessing and Start Asking"
+date: "2026-01-29"
+description: "Deconstructing SQ-BCP: A category-theoretic approach to solving hallucinated planning in under-specified AI environments."
+tags: ["Research", "AI", "Strategy", "LLMs"]
+category: "Research"
+image_prompt: "A minimalist, geometric visualization of a logic gate transitioning into a question mark. Dark slate background, neon cyan and deep violet accents. Architectural blueprint style with thin white lines representing a bidirectional search path."
+---
+
+In engineering, the most dangerous state isn't a "Failure"—it’s an "Unknown" masquerading as a "Success." 
+
+Current Large Language Models (LLMs) suffer from a fundamental overconfidence bias. When you give an LLM a task with missing information—what researchers call *partial observability*—the model doesn't stop to ask for clarification. It hallucinates the missing variables to complete the sequence. In a sandbox, this is a quirk; in production-grade planning (like supply chain or automated DevOps), it’s a liability.
+
+The paper **"Teaching LLMs to Ask: Self-Querying Category-Theoretic Planning (SQ-BCP)"** offers a rigorous architectural fix for this.
+
+### 1. The Breakthrough: Explicit Uncertainty
+The core innovation of SQ-BCP is that it moves away from probabilistic "guessing" toward formal, categorical verification. Instead of just predicting the next token, the system explicitly labels preconditions as **Satisfied (Sat)**, **Violated (Viol)**, or **Unknown (Unk)**.
+
+If a precondition is "Unknown," the model doesn't proceed. It utilizes two distinct recovery paths:
+1.  **Self-Querying**: It pauses and asks the user (the "Oracle") for the missing data.
+2.  **Bridging**: It inserts a sub-action to resolve the unknown (e.g., "Check inventory" before "Start production").
+
+By using a pullback-based verifier—a concept from Category Theory—the model ensures that the plan is mathematically compatible with the goal before a single line of execution occurs.
+
+### 2. Why It Matters: Engineering Reality > Model Hallucination
+As a Product Strategist, I prioritize **system reliability** over raw generative speed. Most "Agentic AI" workflows fail because they lack a deterministic check on hard constraints. 
+
+In my work on **Green Engine**, we dealt with IoT sensors where data packets were often dropped or delayed. If the system assumed a soil moisture level because the data was missing, it risked ruining a crop yield. We needed the system to acknowledge the "Unknown" status and trigger a diagnostic or a re-query. 
+
+SQ-BCP formalizes this logic for LLMs. By reducing resource-violation rates by nearly 50% compared to baseline models in WikiHow and RecipeNLG tasks, it proves that "admitting ignorance" is actually a performance multiplier.
+
+### 3. Strategic Application: Building the Next Generation of Agents
+For founders and engineering leads, the takeaway isn't just "use this new model." It’s about shifting your system design from **Linear Generation** to **Verified Planning**.
+
+*   **Complex Marketplaces**: If you are building something like the **Collaborative Ecosystem** (a marketplace for research), your AI agents cannot assume a researcher's availability or a lab's equipment status. They must query the underlying database via API (the Oracle) to move a precondition from `Unk` to `Sat`.
+*   **Industrial IoT & Predictive Maintenance**: For platforms like **Smart Roofing**, an AI agent shouldn't just predict a leak; it should identify which sensor data is missing to make that prediction 100% reliable.
+
+**The Trade-off**: This approach introduces latency. Verification and "asking" take time. However, in enterprise settings, the ROI of a correct, verified plan far outweighs the cost of a fast, hallucinated one.
+
+### My Take
+SQ-BCP is the bridge we need between the "vibes-based" prompting of 2024 and the "logic-based" engineering required for 2026. If your product relies on AI taking real-world actions, you cannot afford to let your model guess. Stop building agents that act like interns; start building systems that act like engineers.
