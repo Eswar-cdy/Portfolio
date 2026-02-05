@@ -1,0 +1,33 @@
+---
+title: "AI Agent Rigor: Avoiding the 'Prompt Spaghetti' Trap"
+date: "2026-02-05"
+description: "Analyzing why traditional architectural patterns are the only thing keeping AI agents from becoming unmaintainable tech debt."
+tags: ["Engineering", "AI", "System Design"]
+category: "Engineering"
+image_prompt: "A minimalist geometric composition of circuit paths merging into a centralized node, deep charcoal background with neon cyan highlights, high contrast, clean lines, isometric style, dark mode aesthetic."
+---
+
+The current state of AI agent development reminds me of the early days of any disruptive tech: a lot of "magic" and very little engineering rigor. Everyone is rushing to ship, but few are thinking about what happens when the prompt chain breaks at 3 AM.
+
+I recently went through the Stack Overflow interview with Eno Reyes from Factory. His take on "code smells" for AI agents is a refreshing pivot back to reality. My core philosophy is that **if it doesn't solve a user problem reliably, it's just code, not a product.** When it comes to agents, reliability is currently the biggest bottleneck to ROI.
+
+### 1. The Challenge: Stochastic Fragility
+The primary challenge Reyes identifies—and one I see constantly—is the transition from deterministic software to stochastic agents. Traditional software is predictable: Input A leads to Output B. AI agents introduce a "probability cloud." 
+
+The "smell" here is the **Monolithic Prompt**. When engineers try to cram the entire business logic, edge-case handling, and formatting instructions into a single 4,000-token prompt, they aren't building a system; they’re building a black box. This makes debugging nearly impossible and scalability a nightmare. At scale, this fragility translates directly into increased API latency and costs.
+
+### 2. The Architecture: Composability and Guardrails
+To move past the "toy" phase, we need to apply classic System Design patterns to LLM workflows:
+
+*   **Modular Decomposition**: Instead of one "God Prompt," break the agent into task-specific units. One unit handles intent classification, another fetches data, and a third synthesizes the response.
+*   **Deterministic Shunting**: Don't let the LLM do math or search a database using natural language if a Python script or a SQL query can do it better.
+*   **Structured Tracing**: Reyes mentions the need for better observability. We need to treat agent logs like system traces, not just chat transcripts.
+
+This mirrors my experience building **Green Engine**. When integrating IoT sensors with Python FastAPI, we couldn't just rely on "raw" data streams. We had to build structured validation layers to ensure the ML models received clean inputs. AI agents require the same "logic" pipelines; without them, you're just piping noise into a more expensive generator.
+
+### 3. Takeaway: Logic Over Magic
+The lesson for building scalable systems today is simple: **Engineering rigor is more important, not less, when the core component is non-deterministic.**
+
+We need to stop treating LLMs as "smart humans" and start treating them as powerful but unpredictable modules within a larger, strictly defined architecture. "Prompt Engineering" is a temporary fix; System Design is the long-term solution. 
+
+If you're building an agentic platform today, your goal shouldn't be to write the "perfect prompt." It should be to build a system that is resilient enough to handle a bad one. My take? The best AI products of 2026 won't be the ones with the best models, but the ones with the best architectural guardrails.
